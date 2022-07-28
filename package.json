@@ -1,0 +1,20 @@
+{
+    "name": "RatPwbook",
+    "version": "0.0.1",
+    "description": "a little password book software with electron.",
+    "main": "main.js",
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc -w",
+        "style": "node ./script/compile_less.js",
+        "open": "electron ./dist/main.js",
+        "start": "npm run build && npm run style && npm run open"
+    },
+    "author": "sealleci",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^17.0.38",
+        "electron": "^19.0.2",
+        "typescript": "^4.7.2"
+    }
+}

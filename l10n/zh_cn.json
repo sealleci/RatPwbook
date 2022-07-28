@@ -1,0 +1,32 @@
+{
+    "LANGUAGE_PROPERTIES": {
+        "LANGUAGE_KEY": "ZH_CN",
+        "LANGUAGE_NAME": "中文"
+    },
+    "STRING_FIELDS": {
+        "SEARCH_PLACEHOLDER": "搜索",
+        "SYSTEM_DELETE_BUTTON": "删除",
+        "SYSTEM_DELETE_CONFIRM_BUTTON": "确认删除",
+        "SYSTEM_DELETE_CANCEL_BUTTON": "取消删除",
+        "ACCOUNT_LOGID": "帐号",
+        "ACCOUNT_EMAIL": "邮箱",
+        "ACCOUNT_PHONE": "电话",
+        "ACCOUNT_CARD_PASSWORD": "密码",
+        "ACCOUNT_COMMENT": "备注",
+        "ACCOUNT_DETAIL_BUTTON": "查看详情",
+        "BACK_TO_LIST_BUTTON": "返回",
+        "ACCOUNT_EDIT_BUTTON": "编辑",
+        "ACCOUNT_DELETE_BUTTON": "删除",
+        "ACCOUNT_DELETE_CONFIRM_BUTTON": "确认",
+        "ACCOUNT_DELETE_CANCEL_BUTTON": "取消",
+        "ACCOUNT_CURRENT_PASSWORD": "现用密码",
+        "ACCOUNT_PAST_PASSWORDS": "曾用密码",
+        "ACCOUNT_EDIT_CANCEL_BUTTON": "取消编辑",
+        "ACCOUNT_EDIT_CONFIRM_BUTTON": "确认编辑",
+        "SYSTEM_NAME": "系统名称",
+        "SYSTEM_URL": "系统链接",
+        "SYSTEM_ADD_CANCEL_BUTTON": "取消添加",
+        "SYSTEM_ADD_CONFIRM_BUTTON": "确认添加",
+        "MESSAGES": []
+    }
+}

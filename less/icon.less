@@ -1,0 +1,202 @@
+@import (reference) "./general.less";
+
+.custom-icon {
+    flex-shrink: 0;
+
+    &.search-icon {
+        @color: black;
+        @size: 1.5rem;
+        @gap: .1rem;
+
+        position: relative;
+        width: @size;
+        height: @size;
+        // outline: 1px solid red;
+
+        &>div:nth-child(1) {
+            @radius: .75rem;
+            position: absolute;
+            top: @gap;
+            left: @gap;
+            width: @radius;
+            height: @radius;
+            border: .25rem solid @color;
+            border-radius: 50%;
+        }
+
+        &>div:nth-child(2) {
+            @width: .25rem;
+            position: absolute;
+            right: calc(@width / -2);
+            bottom: @gap;
+            width: @width;
+            height: .6rem;
+            background-color: @color;
+            border-radius: @width;
+            transform-origin: 50% 100%;
+            transform: rotate(-50deg);
+        }
+    }
+
+    &.plus-icon {
+        @width: 0.4rem;
+        @height: 1.5rem;
+        @color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: @height;
+        height: @height;
+        // outline: 1px solid red;
+
+        &>div {
+            position: absolute;
+            width: @width;
+            height: @height;
+            background-color: @color;
+            border-radius: @width;
+        }
+
+        &>div:nth-child(2) {
+            transform: rotate(90deg);
+        }
+    }
+
+    &.list-icon {
+        @size: 1.5rem;
+        @color: black;
+        position: relative;
+        .flex-column-center();
+        justify-content: center;
+        width: @size;
+        height: @size;
+        // outline: 1px solid black;
+
+        &>div {
+            width: 1.2rem;
+            height: 3px;
+            border-radius: @size;
+            background-color: @color;
+            margin: 2px 0;
+        }
+    }
+
+    &.detial-icon {
+        @size: 1.2rem;
+        @color: white;
+        position: relative;
+        .flex-row-center();
+        justify-content: center;
+        width: @size;
+        height: @size;
+
+        &>div {
+            .flex-row-center();
+            height: 100%;
+            width: 100%;
+            outline: 2px solid @color;
+            border-radius: 50%;
+
+            &::before {
+                content: "i";
+            }
+        }
+    }
+
+    @outline-width: 3px;
+    @eye-pearl-size: .6rem;
+    @rate: 80%;
+    @eye-color: @blue-gray-color;
+    @eye-size: 1.5rem;
+
+    &.eye-open-icon {
+        position: relative;
+        .flex-row-center();
+        justify-content: center;
+        width: @eye-size;
+        height: @eye-size;
+
+        &>div:nth-child(1) {
+            @eye-width: 3px;
+            position: absolute;
+            height: @rate;
+            width: @rate;
+            // outline: 1px solid red;
+            border-radius: 50%;
+            outline: @outline-width solid @eye-color;
+
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     display: block;
+            //     top: calc(@size / 2 - @eye-size / 2 - @eye-width + 1px);
+            //     width: 100%;
+            //     height: calc(@eye-size * 1.5);
+            //     border-top: @eye-width solid @color;
+            //     border-radius: 50% 50% 0 0;
+            // }
+
+            // &::after {
+            //     content: "";
+            //     position: absolute;
+            //     display: block;
+            //     bottom: calc(@size / 2 - @eye-size / 2 - @eye-width + 1px);
+            //     width: 100%;
+            //     height: calc(@eye-size * 1.5);
+            //     border-bottom: @eye-width solid @color;
+            //     border-radius: 0 0 50% 50%;
+            // }
+
+        }
+
+        &>div:nth-child(2) {
+            width: @eye-pearl-size;
+            height: @eye-pearl-size;
+            background-color: @eye-color;
+            border-radius: 50%;
+        }
+
+    }
+
+    &.eye-close-icon {
+        position: relative;
+        .flex-row-center();
+        justify-content: center;
+        width: @eye-size;
+        height: @eye-size;
+
+        // &>div:nth-child(1) {
+        //     @eye-size: calc(80% + @outline-width * 2);
+        //     @border-width: calc(7px);
+        //     width: calc(@eye-size - @border-width * 2);
+        //     height: calc(@eye-size - @border-width * 2);
+        //     border-radius: 50%;
+        //     outline: @border-width solid @font-color-default;
+        // }
+
+        &>div:nth-child(1) {
+            position: absolute;
+            height: calc(@rate + @outline-width * 2);
+            width: calc(@rate + @outline-width * 2);
+            background-color: @eye-color;
+            border-radius: 50%;
+
+        }
+
+        &>div:nth-child(2) {
+            position: absolute;
+            width: @rate;
+            height: 4px;
+            background-color: @gray-color;
+            border-radius: 6px;
+        }
+
+        // &>div:nth-child(2) {
+        //     transform: rotate(45deg);
+        // }
+
+        // &>div:nth-child(3) {
+        //     transform: rotate(-45deg);
+        // }
+    }
+}

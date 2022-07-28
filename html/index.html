@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="../dist/icon.css">
+    <link rel="stylesheet" href="../dist/component.css">
+    <link rel="stylesheet" href="../dist/style.css">
+    <title>Rat Pwbook</title>
+</head>
+
+<body>
+    <div id="language-bar">
+        <div id="show-navigator-bar-button" class="custom-button">
+            <div class="custom-icon list-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="message-bar">
+            <div style="display: block;">
+                <!-- 列表为空 -->
+            </div>
+        </div>
+        <!-- 
+        <div class="custom-select" id="language-select">
+            <div class="select-selected-wrap">
+                <div class="select-selected" value="0">中文</div>
+                <div class="select-arrow select-arrow-active"></div>
+            </div>
+            <div class="select-items select-hide">
+                <div class="same-as-selected" value="0">中文</div>
+                <div value="1">English</div>
+                <div value="2">Ratling</div>
+            </div>
+        </div> 
+        -->
+    </div>
+    <div id="navigator-bar">
+        <div id="navigator-content">
+            <div id="navigator-search-bar">
+                <div id="navigator-search-bar-left" class="navigator-search-bar-end"></div>
+                <div id="navigator-search-input-wrap">
+                    <input type="text" id="navigator-search-input" l10nkey="SEARCH_PLACEHOLDER" placeholder="搜索" />
+                    <div class="search-icon custom-icon" id="search-button">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div id="navigator-search-bar-right" class="navigator-search-bar-end"></div>
+            </div>
+            <div id="navigator-system-list-wrap">
+                <div id="system-add-card-wrap">
+                    <div id="system-add-card" class="system-card">
+                        <div class="plus-icon custom-icon">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="navigator-system-list">
+                    <div class="system-card">微博</div>
+                    <div class="system-card">微博</div>
+                    <div class="system-card">微博</div>
+                    <div class="system-card">微博</div>
+                    <div class="system-card">微博</div>
+                    <div class="system-card">微博</div>
+                    <div class="system-card">微博</div>
+                    <div class="system-card">微博</div>
+                    <div class="system-card">微博</div>
+                    <div class="system-card">微博</div>
+                    <div class="system-card">微博</div>
+                    <div class="system-card">微博</div>
+                    <div class="system-card">微博</div>
+                    <div class="system-card">微博</div>
+                    <div class="system-card">微博</div>
+
+                    <!-- <div class="system-card system-card-active">QQ</div> -->
+                </div>
+            </div>
+            <div id="hide-navigator-button-wrap">
+                <div id="hide-navigator-button">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main" style="display: flex;">
+        <div id="system-list-page" class="system-list-wrap" style="display: flex;">
+            <div class="system-wrap">
+                <div class="system-header">
+                    <div class="system-name">
+                        <input class="copy-field" value="微信" readonly />
+                    </div>
+                    <div class="system-url">
+                        <input class="copy-field" value="weixin.com/home?spam=123&a=456" readonly />
+                    </div>
+                    <div class="system-delete-wrap">
+                        <div class="system-delete-button custom-button" l10nkey="SYSTEM_DELETE_BUTTON"
+                            style="display: block;">
+                            删除</div>
+                        <div class="system-delete-check" style="display: none;">
+                            <div class="system-delete-cancel-button custom-button"
+                                l10nkey="SYSTEM_DELETE_CANCEL_BUTTON">
+                                Cancel
+                            </div>
+                            <div class="system-delete-confirm-button custom-button"
+                                l10nkey="SYSTEM_DELETE_CONFIRM_BUTTON">
+                                确认删除
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account-list">
+                    <div class="account-card">
+                        <div class="account-name">
+                            <input class="copy-field" value="超级大鼠" readonly />
+                        </div>
+                        <div class="account-field">
+                            <div class="account-field-key" l10nkey="ACCOUNT_LOGID">
+                                <div>帐号</div>
+                            </div>
+                            <input class="account-field-value copy-field" value="1234567890000000000000000" readonly />
+                        </div>
+                        <div class="account-field">
+                            <div class="account-field-key" l10nkey="ACCOUNT_EMAIL">
+                                <div>邮箱</div>
+                            </div>
+                            <input class="account-field-value copy-field" value="1594890315@qq.com" readonly />
+                        </div>
+                        <div class="account-field">
+                            <div class="account-field-key" l10nkey="ACCOUNT_PHONE">
+                                <div>电话</div>
+                            </div>
+                            <input class="account-field-value copy-field" value="1234567890" readonly />
+                        </div>
+                        <div class="account-field">
+                            <div class="account-field-key" l10nkey="ACCOUNT_CARD_PASSWORD">
+                                <div>密码</div>
+                            </div>
+                            <div class="account-secret-field-wrap">
+                                <div class="account-secret-field-value">
+                                    <div class style="display: block;"></div>
+                                    <input class="account-field-value copy-field" value="1234567890" readonly />
+                                </div>
+                                <div class="eye-icon-wrap">
+                                    <div class="eye-close-icon custom-icon" style="display: flex;">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="eye-open-icon custom-icon" style="display: none;">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account-field">
+                            <div class="account-field-key" l10nkey="ACCOUNT_COMMENT">
+                                <div>备注</div>
+                            </div>
+                            <input class="account-field-value copy-field" value="1234567890" readonly />
+                        </div>
+                        <div class="account-detail-button custom-button">
+                            <div l10nkey="ACCOUNT_DETAIL_BUTTON">
+                                查看详情
+                            </div>
+                            <div class="detial-icon custom-icon">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-card" id="plus-account-card">
+                        <div class="plus-icon custom-icon">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="account-detail-page" style="display: none;">
+            <div class="system-wrap">
+                <div class="system-header">
+                    <div class="system-name">
+                        <input class="copy-field" value="微信" readonly />
+                    </div>
+                    <div class="system-url">
+                        <input class="copy-field" value="weixin.com/home?spam=123&a=456" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="page-header">
+                <div id="back-to-list-button" class="custom-button">
+                    <div></div>
+                    <div l10nkey="BACK_TO_LIST_BUTTON">返回</div>
+                </div>
+                <div class="account-name">
+                    <input class="copy-field" value="超级大鼠" readonly />
+                </div>
+                <div class="page-button-wrap">
+                    <div id="account-edit-button" class="custom-button" l10nkey="ACCOUNT_EDIT_BUTTON">
+                        修改
+                    </div>
+                    <div id="account-delete-button-wrap">
+                        <div id="account-delete-button" class="custom-button" l10nkey="ACCOUNT_DELETE_BUTTON">
+                            删除
+                        </div>
+                        <div id="account-delete-check" style="display: none;">
+                            <div id="account-delete-cancel-button" class="custom-button"
+                                l10nkey="ACCOUNT_DELETE_CANCEL_BUTTON">
+                                取消
+                            </div>
+                            <div id="account-delete-confirm-button" class="custom-button"
+                                l10nkey="ACCOUNT_DELETE_CONFIRM_BUTTON">
+                                确认
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-body">
+                <div class="account-main-part">
+                    <class class="account-infomation-part">
+                        <div class="account-field">
+                            <div class="account-field-key" l10nkey="ACCOUNT_LOGID">
+                                <div>帐号</div>
+                            </div>
+                            <input class="account-field-value copy-field" value="1234567890" readonly />
+                        </div>
+                        <div class="account-field">
+                            <div class="account-field-key" l10nkey="ACCOUNT_EMAIL">
+                                <div>邮箱</div>
+                            </div>
+                            <input class="account-field-value copy-field" value="1234567890" readonly />
+                        </div>
+                        <div class="account-field">
+                            <div class="account-field-key" l10nkey="ACCOUNT_PHONE">
+                                <div>电话</div>
+                            </div>
+                            <input class="account-field-value copy-field" value="1234567890" readonly />
+                        </div>
+                        <div class="account-field">
+                            <div class="account-field-key" l10nkey="ACCOUNT_COMMENT">
+                                <div>Comment</div>
+                            </div>
+                            <input class="account-field-value copy-field" value="1234567890" readonly />
+                        </div>
+                    </class>
+                    <div class="account-password-part">
+                        <div class="account-field">
+                            <div class="account-field-key" l10nkey="ACCOUNT_CURRENT_PASSWORD">
+                                <div>Password</div>
+                            </div>
+                            <div class="account-secret-field-wrap">
+                                <div class="account-secret-field-value">
+                                    <div></div>
+                                    <input class="account-field-value copy-field" value="1234567890" readonly />
+                                </div>
+                                <div class="eye-icon-wrap">
+                                    <div class="eye-close-icon custom-icon" style="display: flex;">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="eye-open-icon custom-icon" style="display: none;">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="past-passwords">
+                            <div class="past-passwords-header account-field">
+                                <div class="account-field-key" l10nkey="ACCOUNT_PAST_PASSWORDS">
+                                    曾用密码
+                                </div>
+                                <div class="account-field-empty"></div>
+                            </div>
+                            <div class="past-passwords-list">
+                                <div class="account-field">
+                                    <div class="account-field-key">
+                                        <div>1.</div>
+                                    </div>
+                                    <div class="account-secret-field-wrap">
+                                        <div class="account-secret-field-value">
+                                            <div></div>
+                                            <input class="account-field-value copy-field" value="1234567890" readonly />
+                                        </div>
+                                        <div class="eye-icon-wrap">
+                                            <div class="eye-close-icon custom-icon" style="display: flex;">
+                                                <div></div>
+                                                <div></div>
+                                            </div>
+                                            <div class="eye-open-icon custom-icon" style="display: none;">
+                                                <div></div>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account-protection-part">
+                    <div class="account-protection-header account-field">
+                        <div class="account-field-key" l10nkey="ACCOUNT_PROTECTION">
+                            密保问题
+                        </div>
+                        <div class="account-field-empty"></div>
+                    </div>
+                    <div class="account-protection-list">
+                        <div class="account-protection-item">
+                            <div class="account-protection-number">
+                                1.
+                            </div>
+                            <div class="account-field">
+                                <div class="account-field-question">
+                                    <div>陈瑞捏</div>
+                                </div>
+                                <div class="account-secret-field-wrap">
+                                    <div class="account-secret-field-value">
+                                        <div></div>
+                                        <input class="account-field-value copy-field" value="1234567890" readonly />
+                                    </div>
+                                    <div class="eye-icon-wrap">
+                                        <div class="eye-close-icon custom-icon" style="display: flex;">
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="eye-open-icon custom-icon" style="display: none;">
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="account-edit-page" style="display: none;">
+            <div class="system-wrap">
+                <div class="system-header">
+                    <div class="system-name">
+                        <input class="copy-field" value="微信" readonly />
+                    </div>
+                    <div class="system-url">
+                        <input class="copy-field" value="weixin.com/home?spam=123&a=456" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="page-header">
+                <div id="account-edit-name" class="account-field">
+                    <input class="account-field-value edit-field" value="超级大鼠" />
+                </div>
+                <div class="page-button-wrap">
+                    <div id="account-edit-cancel-button" class="custom-button" l10nkey="ACCOUNT_EDIT_CANCEL_BUTTON">
+                        Cancel edition1111
+                    </div>
+                    <div id="account-edit-confirm-button" class="custom-button" l10nkey="ACCOUNT_EDIT_CONFIRM_BUTTON">
+                        Confirm edition1111
+                    </div>
+                </div>
+            </div>
+            <div class="page-body">
+                <div class="account-main-part">
+                    <class class="account-infomation-part">
+                        <div id="account-logid-field" class="account-field">
+                            <div class="account-field-key" l10nkey="ACCOUNT_LOGID">
+                                <div>帐号</div>
+                            </div>
+                            <input class="account-field-value edit-field" value="1234567890" />
+                        </div>
+                        <div id="account-email-field" class="account-field">
+                            <div class="account-field-key" l10nkey="ACCOUNT_EMAIL">
+                                <div>邮箱</div>
+                            </div>
+                            <input class="account-field-value edit-field" value="1234567890" />
+                        </div>
+                        <div id="account-phone-field" class="account-field">
+                            <div class="account-field-key" l10nkey="ACCOUNT_PHONE">
+                                <div>电话</div>
+                            </div>
+                            <input class="account-field-value edit-field" value="1234567890" />
+                        </div>
+                        <div id="account-comment-field" class="account-field">
+                            <div class="account-field-key" l10nkey="ACCOUNT_COMMENT">
+                                <div>Comment</div>
+                            </div>
+                            <input class="account-field-value edit-field" value="1234567890" />
+                        </div>
+                    </class>
+                    <div class="account-password-part">
+                        <div id="account-password-field" class="account-field">
+                            <div class="account-field-key" l10nkey="ACCOUNT_CURRENT_PASSWORD">
+                                <div>Password</div>
+                            </div>
+                            <div class="account-secret-field-wrap account-secret-edit-field-wrap">
+                                <input class="account-field-value secret-edit-field" value="1234567890" type="password"
+                                    readonly />
+                                <div class="eye-icon-wrap">
+                                    <div class="eye-close-icon custom-icon" style="display: flex;">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="eye-open-icon custom-icon" style="display: none;">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="past-passwords">
+                            <div class="past-passwords-header account-field">
+                                <div class="account-field-key" l10nkey="ACCOUNT_PAST_PASSWORDS">
+                                    曾用密码
+                                </div>
+                                <div class="account-field-empty"></div>
+                            </div>
+                            <div class="past-passwords-list">
+                                <div class="account-field">
+                                    <div class="account-field-key">
+                                        <div>1.</div>
+                                    </div>
+                                    <div class="account-secret-field-wrap account-secret-edit-field-wrap">
+                                        <input class="account-field-value secret-edit-field" value="1234567890"
+                                            type="password" readonly />
+                                        <div class="eye-icon-wrap">
+                                            <div class="eye-close-icon custom-icon" style="display: flex;">
+                                                <div></div>
+                                                <div></div>
+                                            </div>
+                                            <div class="eye-open-icon custom-icon" style="display: none;">
+                                                <div></div>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="password-delete-button custom-button">删除</div>
+                                </div>
+                                <div class="past-password-add-button custom-button">
+                                    <div class="custom-icon plus-icon">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account-protection-part">
+                    <div class="account-protection-header account-field">
+                        <div class="account-field-key" l10nkey="ACCOUNT_PROTECTION">
+                            密保问题
+                        </div>
+                        <div class="account-field-empty"></div>
+                    </div>
+                    <div class="account-protection-list">
+                        <div class="account-protection-item">
+                            <div class="account-protection-number">
+                                1.
+                            </div>
+                            <div class="account-field">
+                                <div class="account-field-question">
+                                    <input class="account-field-value edit-field" value="1234567890" />
+                                </div>
+                                <div class="account-secret-field-wrap account-secret-edit-field-wrap">
+                                    <input class="account-field-value secret-edit-field" value="1234567890"
+                                        type="password" readonly />
+                                    <div class="eye-icon-wrap">
+                                        <div class="eye-close-icon custom-icon" style="display: flex;">
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="eye-open-icon custom-icon" style="display: none;">
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="protection-delete-button custom-button">删除</div>
+                        </div>
+                        <div class="protection-add-button custom-button">
+                            <div class="custom-icon plus-icon">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="system-add-page" style="display: none;">
+            <div id="system-name-field" class="account-field">
+                <div class="account-field-key" l10nkey="SYSTEM_NAME">
+                    <div>System Name</div>
+                </div>
+                <input class="account-field-value edit-field" value="" />
+            </div>
+            <div id="system-url-field" class="account-field">
+                <div class="account-field-key" l10nkey="SYSTEM_URL">
+                    <div>系统链接</div>
+                </div>
+                <input class="account-field-value edit-field" value="" />
+            </div>
+            <div id="system-add-cancel-button" class="custom-button" l10nkey="SYSTEM_ADD_CANCEL_BUTTON">
+                取消添加
+            </div>
+            <div id="system-add-confirm-button" class="custom-button" l10nkey="SYSTEM_ADD_CONFIRM_BUTTON">
+                确认添加
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+
+<script src="../dist/render.js"></script>
+
+</html>
