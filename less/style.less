@@ -127,6 +127,7 @@ body {
             inset @shadow-bias calc(@shadow-bias * -1) calc(@message-shadow-distance - @shadow-bias) @blue-shadow-light;
         overflow-x: hidden;
         overflow-y: scroll;
+        scrollbar-width: none;
 
         @media @small-screen {
             width: calc(88% - @list-icon-width);
@@ -144,6 +145,10 @@ body {
             @media @small-screen {
                 width: calc(90vw - @list-icon-width + 5vw - @select-offset - 8.6rem - 10px);
             }
+        }
+
+        &::-webkit-scrollbar {
+            width: 0;
         }
 
         // &.message-success {
