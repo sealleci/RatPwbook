@@ -1,13 +1,32 @@
 {
-    "less.compile": {
-        "sourceMap": true,
-        "relativeUrls": false,
-        "out": "${workspaceRoot}/dist/"
-    },
-    "liveServer.settings.ignoreFiles": [
-        ".vscode/**",
-        "**/*.less",
-        "**/*.ts"
-    ],
-    "liveServer.settings.wait": 250
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.tsc.autoDetect": "off",
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/*electron-builder.json5",
+        "/*electron-builder.json"
+      ],
+      "url": "https://json.schemastore.org/electron-builder"
+    }
+  ],
+  "less.compile": {
+    "sourceMap": false,
+    "out": "../css/"
+  },
+  "liveServer.settings.ignoreFiles": [
+    ".vscode/**",
+    "**/*.less",
+    "**/*.ts"
+  ],
+  "liveServer.settings.wait": 250,
+  "liveSassCompile.settings.compileOnWatch": false,
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".css",
+      "savePath": "~/../css"
+    }
+  ]
 }

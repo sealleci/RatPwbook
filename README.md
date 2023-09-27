@@ -7,7 +7,7 @@
 3. 响应式页面布局。Responsible page displays.
 4. 没有老鼠。Rat doesn't exist.
 
-## 须知 Notice
+## 须知 Notices
 
 1. 没有联网功能。Don't have any network functions.
 2. 谨防密码文件泄露。Be careful about the leaking of password files.
@@ -15,14 +15,12 @@
 
 ## 技术 TechSupports
 
-- VS Code
-- HTML/CSS/JS
-- NodeJS
-- Electron
-- Chromium
+- Node.js
 - TypeScript
-- LESS
-- draw.io
+- Electron.js
+- React
+- Less.js
+- Electron-vite-react boilerplate
 
 ## 作者 Staff
 
