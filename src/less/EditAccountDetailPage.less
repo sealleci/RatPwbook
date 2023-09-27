@@ -1,0 +1,153 @@
+@import (reference) "./general.less";
+
+#account-edit-page {
+    .past-passwords-list {
+        position: relative;
+
+        .past-password-add-button {
+            position: relative;
+            .flex-row-center();
+            width: 100%;
+            left: 5%;
+
+            .plus-icon {
+                height: 3rem;
+                width: 3rem;
+                border-radius: 2rem;
+                margin: 3px 0;
+                background-color: @gray-color;
+                box-shadow: -2px 2px 3px @shadow-dark,
+                    2px -2px 3px @shadow-light;
+                .color-transition();
+                opacity: .7;
+
+                &>div {
+                    .color-transition();
+                    background-color: @font-color-default;
+                }
+
+                &:hover {
+                    &>div {
+                        background-color: @blue-gray-color;
+                    }
+
+                }
+
+                &:active {
+                    background-color: @blue-gray-color;
+
+                    &>div {
+                        background-color: white;
+                    }
+                }
+            }
+        }
+
+        .account-field {
+            position: relative;
+            justify-content: flex-end;
+            left: -.5rem;
+
+            .account-field-key {
+                width: 15%;
+            }
+
+            .account-secret-edit-field-wrap {
+                width: 50%;
+            }
+
+            .password-delete-button {
+                @red-color: rgba(red, .6);
+                position: relative;
+                .flex-row-center();
+                width: 16%;
+                height: 100%;
+                padding: .0rem .25rem;
+                margin-left: 8px;
+                border-radius: 2rem;
+                background-color: @gray-color;
+                box-shadow: -2px 2px 3px @shadow-dark,
+                    2px -2px 3px @shadow-light;
+                .color-transition();
+                .word-ellipsis();
+                text-align: center;
+
+                &:hover {
+                    color: @red-color;
+                }
+
+                &:active {
+                    background-color: @red-color;
+                    color: white;
+                }
+
+                @media @small-screen {
+                    width: 15%;
+                }
+            }
+        }
+    }
+}
+
+#account-edit-cancel-button {
+    position: relative;
+    .flex-row-center();
+    min-width: 3rem;
+    max-width: 45%;
+    height: 1.5rem;
+    padding: 2px .75rem;
+    line-height: 1.5rem;
+    margin-right: .5rem;
+    border-radius: 2rem;
+    background-color: @gray-color;
+    box-shadow: -2px 2px 3px @shadow-dark,
+        2px -2px 3px @shadow-light;
+    .color-transition();
+    .word-ellipsis();
+    text-align: center;
+
+    &:hover {
+        color: @blue-gray-color;
+    }
+
+    &:active {
+        background-color: @blue-gray-color;
+        color: white;
+    }
+
+    @media @small-screen {
+        font-size: 12px;
+        padding: .2rem .5rem;
+    }
+}
+
+#account-edit-confirm-button {
+    position: relative;
+    .flex-row-center();
+    min-width: 3rem;
+    max-width: 45%;
+    height: 1.5rem;
+    padding: 2px .75rem;
+    line-height: 1.5rem;
+    border-radius: 2rem;
+    background-color: @gray-color;
+    box-shadow: -2px 2px 3px @shadow-dark,
+        2px -2px 3px @shadow-light;
+    .color-transition();
+    .word-ellipsis();
+    text-align: center;
+
+    &:hover {
+        color: @theme-color-light;
+    }
+
+    &:active {
+        background-color: @theme-color-light;
+        color: white;
+    }
+
+    @media @small-screen {
+        font-size: 12px;
+        padding: .2rem .5rem;
+    }
+}

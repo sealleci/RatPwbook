@@ -1,3 +1,5 @@
+@import (reference) "./general.less";
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif, "黑体";
   line-height: 1.5;
@@ -15,9 +17,25 @@
 }
 
 body {
+  // display: grid;
+  // grid-template-columns: 100%;
+  // grid-template-areas://     "language_bar"
+  //     "navigator_bar"
+  //     "main"
+  //     "footer";
+  position: relative;
+  .flex-column-center();
+  height: 100vh;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  .font-general();
+  overflow-y: hidden;
+  background-color: @gray-color;
+
+  @media @small-screen {
+    // grid-template-columns: 0 1fr;
+    // grid-template-areas:
+    //     "language_bar language_bar"
+    //     "navigator_bar main"
+    //     "footer footer";
+  }
 }
