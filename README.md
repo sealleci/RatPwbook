@@ -1,27 +1,28 @@
-# 老鼠密码本 RatPwbook
+# Rat Password Book
 
-## 功能 Features
+## Features
 
-1. 加密存储密码信息。Storage the encrypted infomation of passwords.
-2. 新拟态风格。Neumorphism style.
-3. 响应式页面布局。Responsible page displays.
-4. 没有老鼠。Rat doesn't exist.
+1. Storage encrypted infomation of passwords.
+2. Neumorphism UI style.
+3. Responsible page displays.
+4. Rat doesn't exist.
 
-## 须知 Notices
+## Notices
 
-1. 没有联网功能。Don't have any network functions.
-2. 谨防密码文件泄露。Be careful about the leaking of password files.
-3. 存在使用风险。Use at your own risk.
+1. This application doesn't have any network function.
+2. Be careful about leaking of password files.
+3. Use at your own risk.
 
-## 技术 TechSupports
+## Tech Supports
 
-- Node.js
 - TypeScript
+- Node.js
 - Electron.js
-- React
+- React.js
 - Less.js
-- Electron-vite-react boilerplate
+- React Router
+- Electron-vite-react Boilerplate
 
-## 作者 Staff
+## Author
 
-- Sealleci (a lil rat)
+- Sealleci (A lil rat)
