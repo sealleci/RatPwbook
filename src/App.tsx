@@ -1,11 +1,11 @@
-import LanguageSelect from './components/LanguageSelect'
+import Header from './components/Header'
 import Navigator from './components/Navigator'
 import PlatformListPage from './views/PlatformListPage'
 import AccountDetailPage from './views/AccountDetailPage'
 import EditAccountDetailPage from './views/EditAccountDetailPage'
 import AddPlatformPage from './views/AddPlatformPage'
 import './css/App.css'
-import './css/icon.css'
+import './css/Icon.css'
 
 console.log('[App.tsx]', `Hello world from Electron ${process.versions.electron}!`)
 
@@ -20,13 +20,19 @@ function AppContainer() {
   )
 }
 
+function Footer() {
+  return (
+    <div id="footer"></div>
+  )
+}
+
 function App() {
   return (
     <>
-      <LanguageSelect />
+      <Header />
       <Navigator />
       <AppContainer />
-      <div id="footer"></div>
+      <Footer />
     </>
   )
 }
