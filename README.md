@@ -20,6 +20,7 @@
 - Electron.js
 - React.js
 - Less.js
+- Redux Toolkit
 - React Router
 - Electron-vite-react Boilerplate
 

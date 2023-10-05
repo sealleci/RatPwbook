@@ -1,8 +1,8 @@
-import { useAppDispatch } from '../store/hooks.ts'
-import { showNav } from '../store/nav_display.ts'
+import { useAppDispatch } from '@/store/hooks.ts'
+import { showNav } from '@/store/nav_display.ts'
 import LanguageSelect from './LanguageSelect'
 import { ListIcon } from './Icon'
-import '../css/Header.css'
+import '@/css/Header.css'
 
 function ShowNavigatorBtn() {
     const dispatch = useAppDispatch()

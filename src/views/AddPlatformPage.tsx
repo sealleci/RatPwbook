@@ -1,4 +1,4 @@
-import '../css/AddPlatformPage.css'
+import '@/css/AddPlatformPage.css'
 
 function AddPlatformPage() {
     return (

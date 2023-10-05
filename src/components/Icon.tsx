@@ -1,4 +1,4 @@
-import '../css/Icon.css'
+import '@/css/Icon.css'
 
 function ListIcon() {
     return (

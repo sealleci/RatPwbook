@@ -1,4 +1,4 @@
-import '../css/LanguageSelect.css'
+import '@/css/LanguageSelect.css'
 
 function LanguageSelect() {
     return (

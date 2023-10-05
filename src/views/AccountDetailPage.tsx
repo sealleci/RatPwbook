@@ -1,4 +1,4 @@
-import '../css/AccountDetailPage.css'
+import '@/css/AccountDetailPage.css'
 
 function AccountDetailPage() {
     return (

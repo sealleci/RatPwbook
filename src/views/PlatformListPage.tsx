@@ -1,4 +1,4 @@
-import '../css/PlatformListPage.css'
+import '@/css/PlatformListPage.css'
 
 function PlatformListPage() {
     return (

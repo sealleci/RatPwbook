@@ -1,7 +1,7 @@
-import { useAppDispatch, useAppSelector } from '../store/hooks.ts'
-import { hideNav, selectNavDisplay } from '../store/nav_display.ts'
+import { useAppDispatch, useAppSelector } from '@/store/hooks.ts'
+import { hideNav, selectNavDisplay } from '@/store/nav_display.ts'
 import SearchBar from './SearchBar'
-import '../css/Navigator.css'
+import '@/css/Navigator.css'
 
 function HideNavigatorBtn() {
     const dispatch = useAppDispatch()

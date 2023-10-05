@@ -1,4 +1,4 @@
-import '../css/EditAccountDetailPage.css'
+import '@/css/EditAccountDetailPage.css'
 
 function EditAccountDetailPage() {
     return (
