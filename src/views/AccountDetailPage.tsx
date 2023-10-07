@@ -1,6 +1,18 @@
+import { useNavigate } from 'react-router-dom'
+import { EyeCloseIcon, EyeOpenIcon } from '@/components/Icon'
 import '@/css/AccountDetailPage.css'
 
 function AccountDetailPage() {
+    const navigate = useNavigate()
+
+    function backToAccount() {
+        navigate('/account')
+    }
+
+    function redirectToEdit() {
+        navigate('/edit')
+    }
+
     return (
         <div id="account-detail-page">
             <div className="system-wrap">
@@ -14,7 +26,7 @@ function AccountDetailPage() {
                 </div>
             </div>
             <div className="page-header">
-                <div id="back-to-list-button" className="custom-button">
+                <div id="back-to-list-button" className="custom-button" onClick={backToAccount}>
                     <div></div>
                     <div data-l10nkey="BACK_TO_LIST_BUTTON">返回</div>
                 </div>
@@ -22,7 +34,8 @@ function AccountDetailPage() {
                     <input className="copy-field" value="超级大鼠" readOnly />
                 </div>
                 <div className="page-button-wrap">
-                    <div id="account-edit-button" className="custom-button" data-l10nkey="ACCOUNT_EDIT_BUTTON">
+                    <div id="account-edit-button" className="custom-button" data-l10nkey="ACCOUNT_EDIT_BUTTON"
+                        onClick={redirectToEdit}>
                         修改
                     </div>
                     <div id="account-delete-button-wrap">
@@ -81,14 +94,7 @@ function AccountDetailPage() {
                                     <input className="account-field-value copy-field" value="1234567890" readOnly />
                                 </div>
                                 <div className="eye-icon-wrap">
-                                    <div className="eye-close-icon custom-icon" style={{ display: 'flex' }}>
-                                        <div></div>
-                                        <div></div>
-                                    </div>
-                                    <div className="eye-open-icon custom-icon" style={{ display: 'none' }}>
-                                        <div></div>
-                                        <div></div>
-                                    </div>
+                                    {<EyeCloseIcon /> ?? <EyeOpenIcon />}
                                 </div>
                             </div>
                         </div>
@@ -110,14 +116,7 @@ function AccountDetailPage() {
                                             <input className="account-field-value copy-field" value="1234567890" readOnly />
                                         </div>
                                         <div className="eye-icon-wrap">
-                                            <div className="eye-close-icon custom-icon" style={{ display: 'flex' }}>
-                                                <div></div>
-                                                <div></div>
-                                            </div>
-                                            <div className="eye-open-icon custom-icon" style={{ display: 'none' }}>
-                                                <div></div>
-                                                <div></div>
-                                            </div>
+                                            {<EyeCloseIcon /> ?? <EyeOpenIcon />}
                                         </div>
                                     </div>
                                 </div>
@@ -147,14 +146,7 @@ function AccountDetailPage() {
                                         <input className="account-field-value copy-field" value="1234567890" readOnly />
                                     </div>
                                     <div className="eye-icon-wrap">
-                                        <div className="eye-close-icon custom-icon" style={{ display: 'flex' }}>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <div className="eye-open-icon custom-icon" style={{ display: 'none' }}>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
+                                        {<EyeCloseIcon /> ?? <EyeOpenIcon />}
                                     </div>
                                 </div>
                             </div>

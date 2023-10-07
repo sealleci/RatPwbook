@@ -1,7 +1,8 @@
-import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '@/store/hooks.ts'
-import { hideNav, selectNavDisplay, showNav } from '@/store/nav_display.ts'
+import { hideNav, selectNavDisplay } from '@/store/nav_display.ts'
 import SearchBar from './SearchBar'
+import { PlusIcon } from './Icon'
 import '@/css/Navigator.css'
 
 function HideNavigatorBtn() {
@@ -22,19 +23,11 @@ function HideNavigatorBtn() {
 
 function Navigator() {
     const navDisplay = useAppSelector(selectNavDisplay)
-    const dispatch = useAppDispatch()
+    const navigate = useNavigate()
 
-    useEffect(() => {
-        const observer = new ResizeObserver(() => {
-            if (document.body.clientWidth > 640) {
-                dispatch(showNav())
-            } else {
-                dispatch(hideNav())
-            }
-        })
-
-        observer.observe(document.body)
-    }, [])
+    function redirectToAddPlatform() {
+        navigate('/add')
+    }
 
     return (
         <div id="navigator-bar" style={{ width: navDisplay ? "100%" : "0" }}>
@@ -42,11 +35,8 @@ function Navigator() {
                 <SearchBar />
                 <div id="navigator-system-list-wrap">
                     <div id="system-add-card-wrap">
-                        <div id="system-add-card" className="system-card">
-                            <div className="plus-icon custom-icon">
-                                <div></div>
-                                <div></div>
-                            </div>
+                        <div id="system-add-card" className="system-card" onClick={redirectToAddPlatform}>
+                            <PlusIcon />
                         </div>
                     </div>
                     <div id="navigator-system-list">

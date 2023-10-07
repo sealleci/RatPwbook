@@ -1,6 +1,18 @@
+import { useNavigate } from 'react-router-dom'
+import { EyeCloseIcon, EyeOpenIcon, DetailIcon, PlusIcon } from '@/components/Icon'
 import '@/css/PlatformListPage.css'
 
 function PlatformListPage() {
+    const navigate = useNavigate()
+
+    function redirectToDetail() {
+        navigate('/detail')
+    }
+
+    function redirectToAddAccount() {
+        navigate('/edit?src=new')
+    }
+
     return (
         <div id="system-list-page" className="system-list-wrap">
             <div className="system-wrap">
@@ -60,14 +72,7 @@ function PlatformListPage() {
                                     <input className="account-field-value copy-field" value="1234567890" readOnly />
                                 </div>
                                 <div className="eye-icon-wrap">
-                                    <div className="eye-close-icon custom-icon" style={{ display: 'flex' }}>
-                                        <div></div>
-                                        <div></div>
-                                    </div>
-                                    <div className="eye-open-icon custom-icon" style={{ display: 'none' }}>
-                                        <div></div>
-                                        <div></div>
-                                    </div>
+                                    {<EyeCloseIcon /> ?? <EyeOpenIcon />}
                                 </div>
                             </div>
                         </div>
@@ -77,20 +82,15 @@ function PlatformListPage() {
                             </div>
                             <input className="account-field-value copy-field" value="1234567890" readOnly />
                         </div>
-                        <div className="account-detail-button custom-button">
+                        <div className="account-detail-button custom-button" onClick={redirectToDetail}>
                             <div data-l10nkey="ACCOUNT_DETAIL_BUTTON">
                                 查看详情
                             </div>
-                            <div className="detial-icon custom-icon">
-                                <div></div>
-                            </div>
+                            <DetailIcon />
                         </div>
                     </div>
-                    <div className="account-card" id="plus-account-card">
-                        <div className="plus-icon custom-icon">
-                            <div></div>
-                            <div></div>
-                        </div>
+                    <div className="account-card" id="plus-account-card" onClick={redirectToAddAccount}>
+                        <PlusIcon />
                     </div>
                 </div>
             </div>

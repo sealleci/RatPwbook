@@ -1,6 +1,13 @@
+import { useNavigate } from 'react-router-dom'
 import '@/css/AddPlatformPage.css'
 
 function AddPlatformPage() {
+    const navigate = useNavigate()
+
+    function backToAccount() {
+        navigate('/account')
+    }
+
     return (
         <div id="system-add-page">
             <div id="system-name-field" className="account-field">
@@ -15,7 +22,8 @@ function AddPlatformPage() {
                 </div>
                 <input className="account-field-value edit-field" value="" />
             </div>
-            <div id="system-add-cancel-button" className="custom-button" data-l10nkey="SYSTEM_ADD_CANCEL_BUTTON">
+            <div id="system-add-cancel-button" className="custom-button" data-l10nkey="SYSTEM_ADD_CANCEL_BUTTON"
+                onClick={backToAccount}>
                 取消添加
             </div>
             <div id="system-add-confirm-button" className="custom-button" data-l10nkey="SYSTEM_ADD_CONFIRM_BUTTON">

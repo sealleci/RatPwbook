@@ -22,7 +22,9 @@
 - Less.js
 - Redux Toolkit
 - React Router
-- Electron-vite-react Boilerplate
+- Electron-vite-react
+- Better-sqlite3-multiple-ciphers
+- ASAR
 
 ## Author
 
