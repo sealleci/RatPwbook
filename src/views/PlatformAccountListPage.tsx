@@ -2,7 +2,7 @@ import '@/css/PlatformListPage.css'
 
 function PlatformListPage() {
     return (
-        <div id="system-list-page" className="system-list-wrap" style={{ display: 'flex' }}>
+        <div id="system-list-page" className="system-list-wrap">
             <div className="system-wrap">
                 <div className="system-header">
                     <div className="system-name">

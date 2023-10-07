@@ -2,7 +2,7 @@ import '@/css/AccountDetailPage.css'
 
 function AccountDetailPage() {
     return (
-        <div id="account-detail-page" style={{ display: 'none' }}>
+        <div id="account-detail-page">
             <div className="system-wrap">
                 <div className="system-header">
                     <div className="system-name">

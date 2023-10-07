@@ -2,7 +2,7 @@ import '@/css/AddPlatformPage.css'
 
 function AddPlatformPage() {
     return (
-        <div id="system-add-page" style={{ display: 'none' }}>
+        <div id="system-add-page">
             <div id="system-name-field" className="account-field">
                 <div className="account-field-key" data-l10nkey="SYSTEM_NAME">
                     <div>System Name</div>

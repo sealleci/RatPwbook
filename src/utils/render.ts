@@ -295,33 +295,33 @@ function bindSecretEyeButtons() {
     }
 }
 
-function bindDisplayNavigatorButtons() {
-    const show_button: HTMLElement = document.querySelector("#show-navigator-bar-button") ?? <HTMLElement>{};
-    const hide_button: HTMLElement = document.querySelector("#hide-navigator-button") ?? <HTMLElement>{};
+// function bindDisplayNavigatorButtons() {
+//     const show_button: HTMLElement = document.querySelector("#show-navigator-bar-button") ?? <HTMLElement>{};
+//     const hide_button: HTMLElement = document.querySelector("#hide-navigator-button") ?? <HTMLElement>{};
 
-    show_button.addEventListener("click", () => {
-        const navigator_bar: HTMLElement = document.querySelector("#navigator-bar") ?? <HTMLElement>{};
-        // navigator_bar.style.setProperty("display", "block", "important");
-        navigator_bar.style.width = "100%";
-    });
+//     show_button.addEventListener("click", () => {
+//         const navigator_bar: HTMLElement = document.querySelector("#navigator-bar") ?? <HTMLElement>{};
+//         // navigator_bar.style.setProperty("display", "block", "important");
+//         navigator_bar.style.width = "100%";
+//     });
 
-    hide_button.addEventListener("click", () => {
-        const navigator_bar: HTMLElement = document.querySelector("#navigator-bar") ?? <HTMLElement>{};
-        navigator_bar.style.width = "0%";
-    });
-}
+//     hide_button.addEventListener("click", () => {
+//         const navigator_bar: HTMLElement = document.querySelector("#navigator-bar") ?? <HTMLElement>{};
+//         navigator_bar.style.width = "0%";
+//     });
+// }
 
-function observeDocumentSizeMutate() {
-    const observer = new ResizeObserver(() => {
-        const navigator_bar: HTMLElement = document.querySelector("#navigator-bar") ?? <HTMLElement>{};
-        if (document.body.offsetWidth > 640 && navigator_bar.style.width !== "100%") {
-            navigator_bar.style.width = "100%";
-        } else if (document.body.offsetWidth <= 640 && navigator_bar.style.width !== "0%") {
-            navigator_bar.style.width = "0%";
-        }
-    });
-    observer.observe(document.body);
-}
+// function observeDocumentSizeMutate() {
+//     const observer = new ResizeObserver(() => {
+//         const navigator_bar: HTMLElement = document.querySelector("#navigator-bar") ?? <HTMLElement>{};
+//         if (document.body.offsetWidth > 640 && navigator_bar.style.width !== "100%") {
+//             navigator_bar.style.width = "100%";
+//         } else if (document.body.offsetWidth <= 640 && navigator_bar.style.width !== "0%") {
+//             navigator_bar.style.width = "0%";
+//         }
+//     });
+//     observer.observe(document.body);
+// }
 
 function bindAccountDeleteButtons() {
     const delete_button: HTMLElement = document.querySelector("#account-delete-button") ?? <HTMLElement>{};
@@ -451,20 +451,20 @@ function bindSystemAddCard() {
 window.addEventListener("DOMContentLoaded", () => {
     RenderLogger.is_debugging = true;
     document.addEventListener("click", CustomSelect.closeSelectItems);
-    observeDocumentSizeMutate();
+    // observeDocumentSizeMutate();
     const language_select = CustomSelect.create("language-select",
         document.querySelector("#language-bar") ?? <HTMLElement>{},
         new Map([["ZH_CN", "中文"], ["EN", "English"]]));
     L10N.load(CustomSelect.bind, language_select);
-    bindSystemDeleteButtons();
-    bindSecretEyeButtons();
-    bindDisplayNavigatorButtons();
-    bindAccountDeleteButtons();
-    bindDetailButuons();
-    bindDetailPageBackButton();
-    bindSecretEditToggleButtons();
-    bindEitCheckButtons();
-    bindGoToDetailPageButton();
-    bindSystemAddCheckButtons();
-    bindSystemAddCard();
+    // bindSystemDeleteButtons();
+    // bindSecretEyeButtons();
+    // bindDisplayNavigatorButtons();
+    // bindAccountDeleteButtons();
+    // bindDetailButuons();
+    // bindDetailPageBackButton();
+    // bindSecretEditToggleButtons();
+    // bindEitCheckButtons();
+    // bindGoToDetailPageButton();
+    // bindSystemAddCheckButtons();
+    // bindSystemAddCard();
 });

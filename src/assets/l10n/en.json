@@ -3,11 +3,11 @@
         "LANGUAGE_KEY": "EN",
         "LANGUAGE_NAME": "English"
     },
-    "STRING_FIELDS": {
+    "FIELDS": {
         "SEARCH_PLACEHOLDER": "Search",
-        "SYSTEM_DELETE_BUTTON": "Delete",
-        "SYSTEM_DELETE_CONFIRM_BUTTON": "Confirm",
-        "SYSTEM_DELETE_CANCEL_BUTTON": "Cancel",
+        "PLATFORM_DELETE_BUTTON": "Delete",
+        "PLATFORM_DELETE_CONFIRM_BUTTON": "Confirm",
+        "PLATFORM_DELETE_CANCEL_BUTTON": "Cancel",
         "ACCOUNT_LOGID": "Login ID",
         "ACCOUNT_EMAIL": "Email",
         "ACCOUNT_PHONE": "Telephone",
@@ -23,10 +23,10 @@
         "ACCOUNT_PAST_PASSWORDS": "Past passwords",
         "ACCOUNT_EDIT_CANCEL_BUTTON": "Cancel",
         "ACCOUNT_EDIT_CONFIRM_BUTTON": "Confirm",
-        "SYSTEM_NAME": "System Name",
-        "SYSTEM_URL": "System Link",
-        "SYSTEM_ADD_CANCEL_BUTTON": "",
-        "SYSTEM_ADD_CONFIRM_BUTTON": "",
-        "MESSAGES": []
+        "PLATFORM_NAME": "PLATFORM Name",
+        "PLATFORM_URL": "PLATFORM Link",
+        "PLATFORM_ADD_CANCEL_BUTTON": "",
+        "PLATFORM_ADD_CONFIRM_BUTTON": "",
+        "MESSAGES": {}
     }
 }

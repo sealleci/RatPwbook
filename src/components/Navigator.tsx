@@ -1,5 +1,6 @@
+import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '@/store/hooks.ts'
-import { hideNav, selectNavDisplay } from '@/store/nav_display.ts'
+import { hideNav, selectNavDisplay, showNav } from '@/store/nav_display.ts'
 import SearchBar from './SearchBar'
 import '@/css/Navigator.css'
 
@@ -21,6 +22,19 @@ function HideNavigatorBtn() {
 
 function Navigator() {
     const navDisplay = useAppSelector(selectNavDisplay)
+    const dispatch = useAppDispatch()
+
+    useEffect(() => {
+        const observer = new ResizeObserver(() => {
+            if (document.body.clientWidth > 640) {
+                dispatch(showNav())
+            } else {
+                dispatch(hideNav())
+            }
+        })
+
+        observer.observe(document.body)
+    }, [])
 
     return (
         <div id="navigator-bar" style={{ width: navDisplay ? "100%" : "0" }}>
