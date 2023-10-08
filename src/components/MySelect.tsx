@@ -31,19 +31,25 @@ function MySelect() {
     const listRef = useRef<HTMLDivElement>(null)
     const [selectedValue, setSelectedValue] = useState<string>(itemList[0].value)
     const [isExpended, setIsExpended] = useState<boolean>(false)
-    const observer = useMemo(() => new ResizeObserver(
-        () => {
-
-        }
-    ), [])
-
-    function clickContainer() {
+    function setListPosition() {
         if (!modalRef.current || !listRef.current || !containerRef.current) { return }
 
         const containerRect = containerRef.current.getBoundingClientRect()
 
         listRef.current.style.left = `${containerRect.left}px`
         listRef.current.style.top = `calc(${containerRect.bottom}px + .25rem)`
+    }
+    const observer = useMemo(() => new ResizeObserver(
+        () => {
+            setListPosition()
+        }
+    ), [])
+
+    function clickContainer() {
+        if (!modalRef.current) { return }
+
+        console.log
+        setListPosition()
         modalRef.current.style.visibility = 'visible'
         setIsExpended(true)
     }
@@ -67,7 +73,7 @@ function MySelect() {
     }, [observer])
 
     return (
-        <div className={isExpended ? "my_select my_select--expanded" : "my_select"}>
+        <div className={isExpended ? 'my_select my_select--expanded' : 'my_select'}>
             <div className="my_select__container" ref={containerRef} onClick={clickContainer}>
                 <div>{itemList.find(item => item.value === selectedValue)?.name}</div>
                 <div>
@@ -77,9 +83,14 @@ function MySelect() {
             <div className="my_select__modal" ref={modalRef} onClick={clickModal}>
                 <div className="my_select__list" ref={listRef}>
                     {
-                        itemList.map(item =>
-                        (<div className={selectedValue === item.value ? 'my_select__item my_select__item--selected' : 'my_select__item'}
-                            data-value={item.value} onClick={(event) => clickItem(event, item.value)}>{item.name}</div>)
+                        itemList.map(
+                            item => (
+                                <div
+                                    className={selectedValue === item.value ? 'my_select__item my_select__item--selected' : 'my_select__item'}
+                                    onClick={(event) => clickItem(event, item.value)}
+                                    data-value={item.value}
+                                >{item.name}</div>
+                            )
                         )
                     }
                 </div>
