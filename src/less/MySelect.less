@@ -6,18 +6,18 @@
     @self_padding_bottom: .25rem;
     @selected_height: 1.2rem;
     @opacity: .4;
+    @select_width: 7rem;
 
     position: relative;
     align-items: flex-end;
-    width: 7rem;
-    border-radius: 2rem;
-
+    width: @select_width;
+    padding-right: .5rem;
     .flex-column-center();
 
     &__container {
         justify-content: space-between;
         height: @selected_height;
-        padding-bottom: @self_padding_bottom !important;
+        padding: @self_padding_bottom;
         border-radius: 2rem;
         background: @gray-color;
         box-shadow:
@@ -39,7 +39,7 @@
             transform-origin: center calc(25% * 2 / 3);
             transition: transform .2s;
 
-            &.select-arrow-active {
+            .my_select--expanded & {
                 transform: rotateX(180deg);
             }
         }
@@ -58,33 +58,32 @@
         position: relative;
         align-items: flex-end;
         position: absolute;
-        top: calc(@selected_height + @self_padding_bottom + @padding_vertical * 2);
 
         .flex-column-center();
 
-        &>div {
+        &>.my_select__item {
             background-color: rgba(white, @opacity);
             backdrop-filter: blur(2px);
-            box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
             border-radius: 0px;
             box-shadow: 0px 0px 2px rgba(0, 0, 0, .2);
 
+            .flex_column_start();
             .break-word();
         }
     }
 
-    &__list>div,
+    &__list>&__item,
     &__container {
-        width: 100%;
-        min-height: 1rem;
-        padding: @padding_vertical @padding_horizontal;
-        line-height: 1rem;
+        width: @select_width;
+        height: 2rem;
+        padding: 0 @padding_horizontal;
+        box-sizing: border-box;
         cursor: pointer;
 
         .font-general();
     }
 
-    &__list>div:hover,
+    &__list>&__item:hover,
     &__item--selected {
         background-color: rgba(@blue-gray-color, @opacity) !important;
     }
