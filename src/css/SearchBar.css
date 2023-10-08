@@ -51,27 +51,27 @@
   background-color: #02b689;
   color: white;
 }
-#navigator-search-bar #navigator-search-input-wrap .search-icon {
+#navigator-search-bar #navigator-search-input-wrap .search_icon {
   background-color: #f5f5f5;
 }
-#navigator-search-bar #navigator-search-input-wrap .search-icon > div:nth-child(1) {
+#navigator-search-bar #navigator-search-input-wrap .search_icon > div:nth-child(1) {
   border-color: #c0c0c0;
   transition: border-color 0.1s;
 }
-#navigator-search-bar #navigator-search-input-wrap .search-icon > div:nth-child(2) {
+#navigator-search-bar #navigator-search-input-wrap .search_icon > div:nth-child(2) {
   background-color: #c0c0c0;
   transition: background-color 0.1s;
 }
-#navigator-search-bar #navigator-search-input-wrap .search-icon:hover > div:nth-child(1) {
+#navigator-search-bar #navigator-search-input-wrap .search_icon:hover > div:nth-child(1) {
   border-color: #a4a4a4;
 }
-#navigator-search-bar #navigator-search-input-wrap .search-icon:hover > div:nth-child(2) {
+#navigator-search-bar #navigator-search-input-wrap .search_icon:hover > div:nth-child(2) {
   background-color: #a4a4a4;
 }
-#navigator-search-bar #navigator-search-input-wrap .search-icon:active > div:nth-child(1) {
+#navigator-search-bar #navigator-search-input-wrap .search_icon:active > div:nth-child(1) {
   border-color: #878585;
 }
-#navigator-search-bar #navigator-search-input-wrap .search-icon:active > div:nth-child(2) {
+#navigator-search-bar #navigator-search-input-wrap .search_icon:active > div:nth-child(2) {
   background-color: #878585;
 }
 #navigator-search-bar #navigator-search-input-wrap #search-button {

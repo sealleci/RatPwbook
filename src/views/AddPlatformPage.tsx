@@ -11,22 +11,22 @@ function AddPlatformPage() {
     return (
         <div id="system-add-page">
             <div id="system-name-field" className="account-field">
-                <div className="account-field-key" data-l10nkey="SYSTEM_NAME">
+                <div className="account-field-key" data-l10n="SYSTEM_NAME">
                     <div>System Name</div>
                 </div>
                 <input className="account-field-value edit-field" value="" />
             </div>
             <div id="system-url-field" className="account-field">
-                <div className="account-field-key" data-l10nkey="SYSTEM_URL">
+                <div className="account-field-key" data-l10n="SYSTEM_URL">
                     <div>系统链接</div>
                 </div>
                 <input className="account-field-value edit-field" value="" />
             </div>
-            <div id="system-add-cancel-button" className="custom-button" data-l10nkey="SYSTEM_ADD_CANCEL_BUTTON"
+            <div id="system-add-cancel-button" className="custom-button" data-l10n="SYSTEM_ADD_CANCEL_BUTTON"
                 onClick={backToAccount}>
                 取消添加
             </div>
-            <div id="system-add-confirm-button" className="custom-button" data-l10nkey="SYSTEM_ADD_CONFIRM_BUTTON">
+            <div id="system-add-confirm-button" className="custom-button" data-l10n="SYSTEM_ADD_CONFIRM_BUTTON">
                 确认添加
             </div>
         </div>

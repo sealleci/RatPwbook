@@ -1,29 +1,20 @@
 #back-to-list-button {
   position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   justify-content: flex-start;
-  left: 0;
   min-width: 5rem;
   max-width: 32%;
   height: 1.5rem;
+  left: 0;
   margin-left: 3px;
   padding: 2px 0.5rem 2px 0;
   line-height: 1.5rem;
   border-radius: 5rem;
   background-color: #d3e1f8;
   box-shadow: -2px 2px 3px #bcc8dd, 2px -2px 3px #eafaff;
-}
-#back-to-list-button > div:nth-child(1) {
-  height: 0;
-  width: 0;
-  border-width: 0.5rem;
-  border-style: solid;
-  border-color: transparent #6e7891 transparent transparent;
-  margin-right: 1rem;
-  transition: border-color 0.1s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 #back-to-list-button > div:nth-child(2) {
   display: block;
@@ -32,7 +23,7 @@
   overflow-x: hidden;
   transition: background-color 0.1s, color 0.1s;
 }
-#back-to-list-button:hover > div:nth-child(1) {
+#back-to-list-button:hover > div:nth-child(1) > div {
   border-color: transparent #6d8dff transparent transparent;
 }
 #back-to-list-button:hover > div:nth-child(2) {
@@ -41,7 +32,7 @@
 #back-to-list-button:active {
   background-color: #6d8dff;
 }
-#back-to-list-button:active > div:nth-child(1) {
+#back-to-list-button:active > div:nth-child(1) > div {
   border-color: transparent white transparent transparent;
 }
 #back-to-list-button:active > div:nth-child(2) {
@@ -52,9 +43,9 @@
   max-width: 50%;
   height: 1.5rem;
   margin-right: 8px;
+  padding: 2px 0.5rem;
   text-align: center;
   border-radius: 5rem;
-  padding: 2px 0.5rem;
   background-color: #d3e1f8;
   box-shadow: -2px 2px 3px #bcc8dd, 2px -2px 3px #eafaff;
   display: block;
@@ -106,14 +97,14 @@
   color: white;
 }
 #account-delete-button-wrap #account-delete-check {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   justify-content: flex-start;
   border-radius: 1.5rem;
   background-color: #d3e1f8;
   box-shadow: -2px 2px 3px #bcc8dd, 2px -2px 3px #eafaff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 #account-delete-button-wrap #account-delete-check > div {
   width: 50%;

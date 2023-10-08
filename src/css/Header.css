@@ -31,25 +31,25 @@
     display: block;
   }
 }
-#language-bar #show-navigator-bar-button .list-icon {
+#language-bar #show-navigator-bar-button .list_icon {
   padding: 4px;
   background-color: #d3e1f8;
   border-radius: 4px;
 }
-#language-bar #show-navigator-bar-button .list-icon > div {
+#language-bar #show-navigator-bar-button .list_icon > div {
   transition: background-color 0.1s, color 0.1s;
   background-color: #6e7891;
 }
-#language-bar #show-navigator-bar-button:hover .list-icon {
+#language-bar #show-navigator-bar-button:hover .list_icon {
   background-color: rgba(109, 141, 255, 0.75);
 }
-#language-bar #show-navigator-bar-button:hover .list-icon div {
+#language-bar #show-navigator-bar-button:hover .list_icon div {
   background-color: white;
 }
-#language-bar #show-navigator-bar-button:active .list-icon {
+#language-bar #show-navigator-bar-button:active .list_icon {
   background-color: #6d8dff;
 }
-#language-bar #show-navigator-bar-button:active .list-icon div {
+#language-bar #show-navigator-bar-button:active .list_icon div {
   background-color: white;
 }
 #language-bar #message-bar {

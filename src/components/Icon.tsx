@@ -2,7 +2,7 @@ import '@/css/Icon.css'
 
 function ListIcon() {
     return (
-        <div className="list-icon custom-icon">
+        <div className="list_icon custom_icon">
             <div></div>
             <div></div>
             <div></div>
@@ -12,7 +12,7 @@ function ListIcon() {
 
 function SearchIcon() {
     return (
-        <div className="search-icon custom-icon">
+        <div className="search_icon custom_icon">
             <div></div>
             <div></div>
         </div>
@@ -21,7 +21,7 @@ function SearchIcon() {
 
 function PlusIcon() {
     return (
-        <div className="plus-icon custom-icon">
+        <div className="plus_icon custom_icon">
             <div></div>
             <div></div>
         </div>
@@ -30,7 +30,7 @@ function PlusIcon() {
 
 function DetailIcon() {
     return (
-        <div className="detial-icon custom-icon">
+        <div className="detail_icon custom_icon">
             <div></div>
         </div>
     )
@@ -38,7 +38,7 @@ function DetailIcon() {
 
 function EyeCloseIcon() {
     return (
-        <div className="eye-close-icon custom-icon">
+        <div className="eye_close_icon custom_icon">
             <div></div>
             <div></div>
         </div>
@@ -47,11 +47,23 @@ function EyeCloseIcon() {
 
 function EyeOpenIcon() {
     return (
-        <div className="eye-open-icon custom-icon">
+        <div className="eye_open_icon custom_icon">
             <div></div>
             <div></div>
         </div>
     )
 }
 
-export { ListIcon, SearchIcon, PlusIcon, DetailIcon, EyeCloseIcon, EyeOpenIcon }    
+function DropDownIcon() {
+    return (
+        <div className="dropdown_icon custom_icon"></div>
+    )
+}
+
+function BackIcon() {
+    return (
+        <div className="back_icon custom_icon"></div>
+    )
+}
+
+export { ListIcon, SearchIcon, PlusIcon, DetailIcon, EyeCloseIcon, EyeOpenIcon, DropDownIcon, BackIcon }    

@@ -50,25 +50,24 @@
                 background-color: @theme-color-light;
                 color: white;
             }
-
-            // outline: 1px solid black;
         }
 
-        .search-icon {
+        .search_icon {
             @icon-color: rgb(192, 192, 192);
             @icon-color-hover: rgb(164, 164, 164);
             @icon-color-active: rgb(135, 133, 133);
-            @trasition-time: .1s;
+            @transition-time: .1s;
+
             background-color: @white-color;
 
             &>div:nth-child(1) {
                 border-color: @icon-color;
-                transition: border-color @trasition-time;
+                transition: border-color @transition-time;
             }
 
             &>div:nth-child(2) {
                 background-color: @icon-color;
-                transition: background-color @trasition-time;
+                transition: background-color @transition-time;
             }
 
             &:hover {

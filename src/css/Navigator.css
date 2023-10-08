@@ -220,7 +220,7 @@
 #navigator-bar #navigator-content #navigator-system-list-wrap #system-add-card-wrap #system-add-card:active {
   background-color: rgba(255, 123, 169, 0.9);
 }
-#navigator-bar #navigator-content #navigator-system-list-wrap #system-add-card-wrap #system-add-card .plus-icon > div {
+#navigator-bar #navigator-content #navigator-system-list-wrap #system-add-card-wrap #system-add-card .plus_icon > div {
   background-color: white;
   transition: background-color 0.1s;
 }

@@ -41,7 +41,7 @@
             display: block;
         }
 
-        .list-icon {
+        .list_icon {
             padding: @icon-padding;
             // background-color: rgba(@blue-gray-color, .6);
             background-color: @gray-color;
@@ -54,7 +54,7 @@
         }
 
         &:hover {
-            .list-icon {
+            .list_icon {
                 background-color: rgba(@blue-gray-color, .75);
 
                 div {
@@ -64,7 +64,7 @@
         }
 
         &:active {
-            .list-icon {
+            .list_icon {
                 background-color: rgba(@blue-gray-color, 1);
 
                 div {
@@ -79,7 +79,7 @@
         @message-shadow-distance: 6px;
         @text-opacity: 1;
         @shadow-bias: 3px;
-        @list-icon-width: calc(1.5rem + 10px);
+        @list_icon-width: calc(1.5rem + 10px);
         position: absolute;
         left: 5vw;
         top: 0;
@@ -106,8 +106,8 @@
         scrollbar-width: none;
 
         @media @small-screen {
-            width: calc(88% - @list-icon-width);
-            margin-left: calc(@list-icon-width);
+            width: calc(88% - @list_icon-width);
+            margin-left: calc(@list_icon-width);
         }
 
         &>div {
@@ -115,11 +115,11 @@
             // height: 100%;
             line-height: 1.5rem;
             text-align: center;
-            .break-wrod();
+            .break-word();
             color: white;
 
             @media @small-screen {
-                width: calc(90vw - @list-icon-width + 5vw - @select-offset - 8.6rem - 10px);
+                width: calc(90vw - @list_icon-width + 5vw - @select-offset - 8.6rem - 10px);
             }
         }
 

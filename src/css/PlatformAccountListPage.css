@@ -272,20 +272,20 @@
   cursor: pointer;
   transition: background-color 0.1s, color 0.1s;
 }
-.account-list #plus-account-card .plus-icon > div {
+.account-list #plus-account-card .plus_icon > div {
   transition: background-color 0.1s, color 0.1s;
   background-color: #6e7891;
 }
 .account-list #plus-account-card:hover {
   background-color: rgba(109, 141, 255, 0.75);
 }
-.account-list #plus-account-card:hover .plus-icon > div {
+.account-list #plus-account-card:hover .plus_icon > div {
   background-color: white;
 }
 .account-list #plus-account-card:active {
   background-color: #6d8dff;
 }
-.account-list #plus-account-card:active .plus-icon > div {
+.account-list #plus-account-card:active .plus_icon > div {
   background-color: white;
 }
 @media screen and (max-width:640px) {

@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from '@/store/hooks.ts'
 import { showNav, hideNav, selectNavDisplay } from '@/store/nav_display.ts'
-import LanguageSelect from './LanguageSelect'
+import MySelect from './MySelect'
 import { ListIcon } from './Icon'
 import '@/css/Header.css'
 
@@ -37,7 +37,7 @@ function Header() {
         <div id="language-bar">
             <ShowNavigatorBtn />
             <MessageBar />
-            <LanguageSelect />
+            <MySelect />
         </div>
     )
 }

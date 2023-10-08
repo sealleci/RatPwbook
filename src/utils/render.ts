@@ -60,7 +60,7 @@ abstract class AbstractCustomSelect {
 }
 
 /**
- * L10N string field attribute in HTML: l10nkey="FIELD_ID"
+ * L10N string field attribute in HTML: l10n="FIELD_ID"
  * and the placeholder of input element
  */
 class L10N {

@@ -44,7 +44,7 @@
   white-space: nowrap;
   overflow-x: hidden;
 }
-.break-wrod {
+.break-word {
   word-wrap: break-word;
   word-break: break-all;
 }

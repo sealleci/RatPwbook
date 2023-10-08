@@ -1,9 +1,9 @@
 @import (reference) "./general.less";
 
-.custom-icon {
+.custom_icon {
     flex-shrink: 0;
 
-    &.search-icon {
+    &.search_icon {
         @color: black;
         @size: 1.5rem;
         @gap: .1rem;
@@ -11,10 +11,10 @@
         position: relative;
         width: @size;
         height: @size;
-        // outline: 1px solid red;
 
         &>div:nth-child(1) {
             @radius: .75rem;
+
             position: absolute;
             top: @gap;
             left: @gap;
@@ -26,6 +26,7 @@
 
         &>div:nth-child(2) {
             @width: .25rem;
+
             position: absolute;
             right: calc(@width / -2);
             bottom: @gap;
@@ -38,16 +39,16 @@
         }
     }
 
-    &.plus-icon {
+    &.plus_icon {
         @width: 0.4rem;
         @height: 1.5rem;
         @color: black;
+
         display: flex;
         justify-content: center;
         align-items: center;
         width: @height;
         height: @height;
-        // outline: 1px solid red;
 
         &>div {
             position: absolute;
@@ -62,15 +63,16 @@
         }
     }
 
-    &.list-icon {
+    &.list_icon {
         @size: 1.5rem;
         @color: black;
+
         position: relative;
-        .flex-column-center();
         justify-content: center;
         width: @size;
         height: @size;
-        // outline: 1px solid black;
+
+        .flex-column-center();
 
         &>div {
             width: 1.2rem;
@@ -81,21 +83,24 @@
         }
     }
 
-    &.detial-icon {
+    &.detail_icon {
         @size: 1.2rem;
         @color: white;
+
         position: relative;
-        .flex-row-center();
         justify-content: center;
         width: @size;
         height: @size;
 
+        .flex-row-center();
+
         &>div {
-            .flex-row-center();
             height: 100%;
             width: 100%;
             outline: 2px solid @color;
             border-radius: 50%;
+
+            .flex-row-center();
 
             &::before {
                 content: "i";
@@ -103,100 +108,82 @@
         }
     }
 
-    @outline-width: 3px;
-    @eye-pearl-size: .6rem;
-    @rate: 80%;
-    @eye-color: @blue-gray-color;
-    @eye-size: 1.5rem;
+    @eye_pupil_size: .6rem;
+    @eye_rate: 80%;
+    @eye_size: 1.5rem;
+    @eye_color: @blue-gray-color;
+    @outline_width: 3px;
 
-    &.eye-open-icon {
+    &.eye_open_icon {
         position: relative;
-        .flex-row-center();
         justify-content: center;
-        width: @eye-size;
-        height: @eye-size;
+        width: @eye_size;
+        height: @eye_size;
+
+        .flex-row-center();
 
         &>div:nth-child(1) {
-            @eye-width: 3px;
+            @eye_width: 3px;
+
             position: absolute;
-            height: @rate;
-            width: @rate;
-            // outline: 1px solid red;
+            height: @eye_rate;
+            width: @eye_rate;
             border-radius: 50%;
-            outline: @outline-width solid @eye-color;
-
-            // &::before {
-            //     content: "";
-            //     position: absolute;
-            //     display: block;
-            //     top: calc(@size / 2 - @eye-size / 2 - @eye-width + 1px);
-            //     width: 100%;
-            //     height: calc(@eye-size * 1.5);
-            //     border-top: @eye-width solid @color;
-            //     border-radius: 50% 50% 0 0;
-            // }
-
-            // &::after {
-            //     content: "";
-            //     position: absolute;
-            //     display: block;
-            //     bottom: calc(@size / 2 - @eye-size / 2 - @eye-width + 1px);
-            //     width: 100%;
-            //     height: calc(@eye-size * 1.5);
-            //     border-bottom: @eye-width solid @color;
-            //     border-radius: 0 0 50% 50%;
-            // }
-
+            outline: @outline_width solid @eye_color;
         }
 
         &>div:nth-child(2) {
-            width: @eye-pearl-size;
-            height: @eye-pearl-size;
-            background-color: @eye-color;
+            width: @eye_pupil_size;
+            height: @eye_pupil_size;
+            background-color: @eye_color;
             border-radius: 50%;
         }
 
     }
 
-    &.eye-close-icon {
+    &.eye_close_icon {
         position: relative;
-        .flex-row-center();
         justify-content: center;
-        width: @eye-size;
-        height: @eye-size;
+        width: @eye_size;
+        height: @eye_size;
 
-        // &>div:nth-child(1) {
-        //     @eye-size: calc(80% + @outline-width * 2);
-        //     @border-width: calc(7px);
-        //     width: calc(@eye-size - @border-width * 2);
-        //     height: calc(@eye-size - @border-width * 2);
-        //     border-radius: 50%;
-        //     outline: @border-width solid @font-color-default;
-        // }
+        .flex-row-center();
 
         &>div:nth-child(1) {
             position: absolute;
-            height: calc(@rate + @outline-width * 2);
-            width: calc(@rate + @outline-width * 2);
-            background-color: @eye-color;
+            height: calc(@eye_rate + @outline_width * 2);
+            width: calc(@eye_rate + @outline_width * 2);
+            background-color: @eye_color;
             border-radius: 50%;
 
         }
 
         &>div:nth-child(2) {
             position: absolute;
-            width: @rate;
+            width: @eye_rate;
             height: 4px;
             background-color: @gray-color;
             border-radius: 6px;
         }
+    }
 
-        // &>div:nth-child(2) {
-        //     transform: rotate(45deg);
-        // }
+    &.dropdown_icon {
+        @size: 6px;
 
-        // &>div:nth-child(3) {
-        //     transform: rotate(-45deg);
-        // }
+        position: relative;
+        width: 0;
+        height: 0;
+        border: @size solid transparent;
+        border-color: @font-color-default transparent transparent transparent;
+    }
+
+    &.back_icon {
+        height: 0;
+        width: 0;
+        border-width: .5rem;
+        border-style: solid;
+        border-color: transparent @font-color-default transparent transparent;
+        margin-right: 1rem;
+        transition: border-color .1s;
     }
 }
