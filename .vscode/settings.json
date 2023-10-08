@@ -11,8 +11,9 @@
     }
   ],
   "less.compile": {
+    "compress": true,
     "sourceMap": false,
-    "out": "../css/"
+    "out": "../css/",
   },
   "liveServer.settings.ignoreFiles": [
     ".vscode/**",
