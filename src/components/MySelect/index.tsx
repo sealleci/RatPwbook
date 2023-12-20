@@ -1,6 +1,6 @@
 import { useRef, useEffect, useMemo, useState } from 'react'
-import { DropDownIcon } from './Icon'
-import '@/css/MySelect.css'
+import { DropDownIcon } from '@/components/Icon'
+import './MySelect.less'
 
 interface SelectItem {
     value: string
@@ -84,11 +84,12 @@ function MySelect() {
                 <div className="my_select__list" ref={listRef}>
                     {
                         itemList.map(
-                            item => (
+                            (item, index) => (
                                 <div
                                     className={selectedValue === item.value ? 'my_select__item my_select__item--selected' : 'my_select__item'}
                                     onClick={(event) => clickItem(event, item.value)}
                                     data-value={item.value}
+                                    key={index}
                                 >{item.name}</div>
                             )
                         )

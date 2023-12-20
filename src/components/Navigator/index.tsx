@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '@/store/hooks.ts'
 import { hideNav, selectNavDisplay } from '@/store/nav_display.ts'
-import SearchBar from './SearchBar'
-import { PlusIcon } from './Icon'
-import '@/css/Navigator.css'
+import SearchBar from '@/components/SearchBar'
+import { PlusIcon } from '@/components/Icon'
+import './Navigator.less'
 
 function HideNavigatorBtn() {
     const dispatch = useAppDispatch()

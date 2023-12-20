@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import '@/css/AddPlatformPage.css'
+import './AddPlatformPage.less'
 
 function AddPlatformPage() {
     const navigate = useNavigate()

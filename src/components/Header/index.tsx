@@ -1,8 +1,8 @@
 import { useAppDispatch, useAppSelector } from '@/store/hooks.ts'
 import { showNav, hideNav, selectNavDisplay } from '@/store/nav_display.ts'
-import MySelect from './MySelect'
-import { ListIcon } from './Icon'
-import '@/css/Header.css'
+import MySelect from '@/components/MySelect'
+import { ListIcon } from '@/components/Icon'
+import './Header.less'
 
 function ShowNavigatorBtn() {
     const navDisplay = useAppSelector(selectNavDisplay)

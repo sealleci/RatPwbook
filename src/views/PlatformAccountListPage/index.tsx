@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { EyeCloseIcon, EyeOpenIcon, DetailIcon, PlusIcon } from '@/components/Icon'
-import '@/css/PlatformAccountListPage.css'
+import './PlatformAccountListPage.less'
 
 function PlatformListPage() {
     const navigate = useNavigate()

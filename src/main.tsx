@@ -5,7 +5,7 @@ import { RouterProvider } from 'react-router-dom'
 import { store } from './store/index.ts'
 import routerStore from './router/index.tsx'
 import './utils/node_api'
-import './css/index.css'
+import './less/index.less'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <StrictMode>

@@ -1,5 +1,5 @@
-import { SearchIcon } from './Icon'
-import '@/css/SearchBar.css'
+import { SearchIcon } from '@/components/Icon'
+import './SearchBar.less'
 
 function SearchBar() {
     return (

@@ -4,7 +4,7 @@ import { useAppDispatch } from '@/store/hooks.ts'
 import { hideNav, showNav } from '@/store/nav_display.ts'
 import Header from './components/Header'
 import Navigator from './components/Navigator'
-import './css/App.css'
+import './less/App.less'
 
 console.log('[App.tsx]', `Hello world from Electron ${process.versions.electron}!`)
 
