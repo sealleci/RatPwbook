@@ -72,7 +72,7 @@
         width: @size;
         height: @size;
 
-        .flex-column-center();
+        .flex-column__center();
 
         &>div {
             width: 1.2rem;
@@ -92,7 +92,7 @@
         width: @size;
         height: @size;
 
-        .flex-row-center();
+        .flex-row__center();
 
         &>div {
             height: 100%;
@@ -100,7 +100,7 @@
             outline: 2px solid @color;
             border-radius: 50%;
 
-            .flex-row-center();
+            .flex-row__center();
 
             &::before {
                 content: "i";
@@ -111,7 +111,7 @@
     @eye_pupil_size: .6rem;
     @eye_rate: 80%;
     @eye_size: 1.5rem;
-    @eye_color: @blue-gray-color;
+    @eye_color: @blue-color__base;
     @outline_width: 3px;
 
     &.eye_open_icon {
@@ -120,7 +120,7 @@
         width: @eye_size;
         height: @eye_size;
 
-        .flex-row-center();
+        .flex-row__center();
 
         &>div:nth-child(1) {
             @eye_width: 3px;
@@ -147,7 +147,7 @@
         width: @eye_size;
         height: @eye_size;
 
-        .flex-row-center();
+        .flex-row__center();
 
         &>div:nth-child(1) {
             position: absolute;
@@ -162,7 +162,7 @@
             position: absolute;
             width: @eye_rate;
             height: 4px;
-            background-color: @gray-color;
+            background-color: @gray-color__base;
             border-radius: 6px;
         }
     }
@@ -174,7 +174,7 @@
         width: 0;
         height: 0;
         border: @size solid transparent;
-        border-color: @font-color-default transparent transparent transparent;
+        border-color: @font-color__base transparent transparent transparent;
     }
 
     &.back_icon {
@@ -182,7 +182,7 @@
         width: 0;
         border-width: .5rem;
         border-style: solid;
-        border-color: transparent @font-color-default transparent transparent;
+        border-color: transparent @font-color__base transparent transparent;
         margin-right: 1rem;
         transition: border-color .1s;
     }

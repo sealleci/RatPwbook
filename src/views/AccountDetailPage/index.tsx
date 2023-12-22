@@ -26,121 +26,91 @@ function AccountDetailPage() {
                 </div>
             </div>
             <div className="page-header">
-                <div id="back-to-list-button" className="custom-button" onClick={backToAccount}>
-                    <div>
-                        <BackIcon />
-                    </div>
-                    <div data-l10n="BACK_TO_LIST_BUTTON">返回</div>
+                <div id="back-to-list-button" className=.button__base" onClick={backToAccount}>
+                <div>
+                    <BackIcon />
                 </div>
-                <div className="account-name">
-                    <input className="copy-field" value="超级大鼠" readOnly />
-                </div>
-                <div className="page-button-wrap">
-                    <div id="account-edit-button" className="custom-button" data-l10n="ACCOUNT_EDIT_BUTTON"
-                        onClick={redirectToEdit}>
-                        修改
-                    </div>
-                    <div id="account-delete-button-wrap">
-                        <div id="account-delete-button" className="custom-button" data-l10n="ACCOUNT_DELETE_BUTTON">
-                            删除
-                        </div>
-                        <div id="account-delete-check" style={{ display: 'none' }}>
-                            <div id="account-delete-cancel-button" className="custom-button"
-                                data-l10n="ACCOUNT_DELETE_CANCEL_BUTTON">
-                                取消
-                            </div>
-                            <div id="account-delete-confirm-button" className="custom-button"
-                                data-l10n="ACCOUNT_DELETE_CONFIRM_BUTTON">
-                                确认
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div data-l10n="BACK_TO_LIST_BUTTON">返回</div>
             </div>
-            <div className="page-body">
-                <div className="account-main-part">
-                    <div className="account-infomation-part">
-                        <div className="account-field">
-                            <div className="account-field-key" data-l10n="ACCOUNT_LOGID">
-                                <div>帐号</div>
-                            </div>
-                            <input className="account-field-value copy-field" value="1234567890" readOnly />
+            <div className="account-name">
+                <input className="copy-field" value="超级大鼠" readOnly />
+            </div>
+            <div className="page-button-wrap">
+                <div id="account-edit-button" className=.button__base" data-l10n="ACCOUNT_EDIT_BUTTON"
+                onClick={redirectToEdit}>
+                修改
+            </div>
+            <div id="account-delete-button-wrap">
+                <div id="account-delete-button" className=.button__base" data-l10n="ACCOUNT_DELETE_BUTTON">
+                删除
+            </div>
+            <div id="account-delete-check" style={{ display: 'none' }}>
+                <div id="account-delete-cancel-button" className=.button__base"
+                                data-l10n="ACCOUNT_DELETE_CANCEL_BUTTON">
+                取消
+            </div>
+            <div id="account-delete-confirm-button" className=.button__base"
+                                data-l10n="ACCOUNT_DELETE_CONFIRM_BUTTON">
+            确认
+        </div>
+                        </div >
+                    </div >
+                </div >
+            </div >
+        <div className="page-body">
+            <div className="account-main-part">
+                <div className="account-infomation-part">
+                    <div className="account-field">
+                        <div className="account-field-key" data-l10n="ACCOUNT_LOGID">
+                            <div>帐号</div>
                         </div>
-                        <div className="account-field">
-                            <div className="account-field-key" data-l10n="ACCOUNT_EMAIL">
-                                <div>邮箱</div>
-                            </div>
-                            <input className="account-field-value copy-field" value="1234567890" readOnly />
-                        </div>
-                        <div className="account-field">
-                            <div className="account-field-key" data-l10n="ACCOUNT_PHONE">
-                                <div>电话</div>
-                            </div>
-                            <input className="account-field-value copy-field" value="1234567890" readOnly />
-                        </div>
-                        <div className="account-field">
-                            <div className="account-field-key" data-l10n="ACCOUNT_COMMENT">
-                                <div>Comment</div>
-                            </div>
-                            <input className="account-field-value copy-field" value="1234567890" readOnly />
-                        </div>
+                        <input className="account-field-value copy-field" value="1234567890" readOnly />
                     </div>
-                    <div className="account-password-part">
-                        <div className="account-field">
-                            <div className="account-field-key" data-l10n="ACCOUNT_CURRENT_PASSWORD">
-                                <div>Password</div>
-                            </div>
-                            <div className="account-secret-field-wrap">
-                                <div className="account-secret-field-value">
-                                    <div></div>
-                                    <input className="account-field-value copy-field" value="1234567890" readOnly />
-                                </div>
-                                <div className="eye-icon-wrap">
-                                    {<EyeCloseIcon /> ?? <EyeOpenIcon />}
-                                </div>
-                            </div>
+                    <div className="account-field">
+                        <div className="account-field-key" data-l10n="ACCOUNT_EMAIL">
+                            <div>邮箱</div>
                         </div>
-                        <div className="past-passwords">
-                            <div className="past-passwords-header account-field">
-                                <div className="account-field-key" data-l10n="ACCOUNT_PAST_PASSWORDS">
-                                    曾用密码
-                                </div>
-                                <div className="account-field-empty"></div>
-                            </div>
-                            <div className="past-passwords-list">
-                                <div className="account-field">
-                                    <div className="account-field-key">
-                                        <div>1.</div>
-                                    </div>
-                                    <div className="account-secret-field-wrap">
-                                        <div className="account-secret-field-value">
-                                            <div></div>
-                                            <input className="account-field-value copy-field" value="1234567890" readOnly />
-                                        </div>
-                                        <div className="eye-icon-wrap">
-                                            {<EyeCloseIcon /> ?? <EyeOpenIcon />}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <input className="account-field-value copy-field" value="1234567890" readOnly />
+                    </div>
+                    <div className="account-field">
+                        <div className="account-field-key" data-l10n="ACCOUNT_PHONE">
+                            <div>电话</div>
                         </div>
+                        <input className="account-field-value copy-field" value="1234567890" readOnly />
+                    </div>
+                    <div className="account-field">
+                        <div className="account-field-key" data-l10n="ACCOUNT_COMMENT">
+                            <div>Comment</div>
+                        </div>
+                        <input className="account-field-value copy-field" value="1234567890" readOnly />
                     </div>
                 </div>
-                <div className="account-protection-part">
-                    <div className="account-protection-header account-field">
-                        <div className="account-field-key" data-l10n="ACCOUNT_PROTECTION">
-                            密保问题
+                <div className="account-password-part">
+                    <div className="account-field">
+                        <div className="account-field-key" data-l10n="ACCOUNT_CURRENT_PASSWORD">
+                            <div>Password</div>
                         </div>
-                        <div className="account-field-empty"></div>
-                    </div>
-                    <div className="account-protection-list">
-                        <div className="account-protection-item">
-                            <div className="account-protection-number">
-                                1.
+                        <div className="account-secret-field-wrap">
+                            <div className="account-secret-field-value">
+                                <div></div>
+                                <input className="account-field-value copy-field" value="1234567890" readOnly />
                             </div>
+                            <div className="eye-icon-wrap">
+                                {<EyeCloseIcon /> ?? <EyeOpenIcon />}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="past-passwords">
+                        <div className="past-passwords-header account-field">
+                            <div className="account-field-key" data-l10n="ACCOUNT_PAST_PASSWORDS">
+                                曾用密码
+                            </div>
+                            <div className="account-field-empty"></div>
+                        </div>
+                        <div className="past-passwords-list">
                             <div className="account-field">
-                                <div className="account-field-question">
-                                    <div>陈瑞捏</div>
+                                <div className="account-field-key">
+                                    <div>1.</div>
                                 </div>
                                 <div className="account-secret-field-wrap">
                                     <div className="account-secret-field-value">
@@ -156,7 +126,37 @@ function AccountDetailPage() {
                     </div>
                 </div>
             </div>
+            <div className="account-protection-part">
+                <div className="account-protection-header account-field">
+                    <div className="account-field-key" data-l10n="ACCOUNT_PROTECTION">
+                        密保问题
+                    </div>
+                    <div className="account-field-empty"></div>
+                </div>
+                <div className="account-protection-list">
+                    <div className="account-protection-item">
+                        <div className="account-protection-number">
+                            1.
+                        </div>
+                        <div className="account-field">
+                            <div className="account-field-question">
+                                <div>陈瑞捏</div>
+                            </div>
+                            <div className="account-secret-field-wrap">
+                                <div className="account-secret-field-value">
+                                    <div></div>
+                                    <input className="account-field-value copy-field" value="1234567890" readOnly />
+                                </div>
+                                <div className="eye-icon-wrap">
+                                    {<EyeCloseIcon /> ?? <EyeOpenIcon />}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        </div >
     )
 }
 

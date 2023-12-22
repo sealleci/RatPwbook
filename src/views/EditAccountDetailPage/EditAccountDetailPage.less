@@ -6,7 +6,7 @@
 
         .past-password-add-button {
             position: relative;
-            .flex-row-center();
+            .flex-row__center();
             width: 100%;
             left: 5%;
 
@@ -15,26 +15,26 @@
                 width: 3rem;
                 border-radius: 2rem;
                 margin: 3px 0;
-                background-color: @gray-color;
-                box-shadow: -2px 2px 3px @shadow-dark,
-                    2px -2px 3px @shadow-light;
-                .color-transition();
+                background-color: @gray-color__base;
+                box-shadow: -2px 2px 3px @shadow__dark,
+                    2px -2px 3px @shadow__light;
+                .bg-color-transition();
                 opacity: .7;
 
                 &>div {
-                    .color-transition();
-                    background-color: @font-color-default;
+                    .bg-color-transition();
+                    background-color: @font-color__base;
                 }
 
                 &:hover {
                     &>div {
-                        background-color: @blue-gray-color;
+                        background-color: @blue-color__base;
                     }
 
                 }
 
                 &:active {
-                    background-color: @blue-gray-color;
+                    background-color: @blue-color__base;
 
                     &>div {
                         background-color: white;
@@ -59,17 +59,17 @@
             .password-delete-button {
                 @red-color: rgba(red, .6);
                 position: relative;
-                .flex-row-center();
+                .flex-row__center();
                 width: 16%;
                 height: 100%;
                 padding: .0rem .25rem;
                 margin-left: 8px;
                 border-radius: 2rem;
-                background-color: @gray-color;
-                box-shadow: -2px 2px 3px @shadow-dark,
-                    2px -2px 3px @shadow-light;
-                .color-transition();
-                .word-ellipsis();
+                background-color: @gray-color__base;
+                box-shadow: -2px 2px 3px @shadow__dark,
+                    2px -2px 3px @shadow__light;
+                .bg-color-transition();
+                .text__word-ellipsis();
                 text-align: center;
 
                 &:hover {
@@ -81,7 +81,7 @@
                     color: white;
                 }
 
-                @media @small-screen {
+                @media @screen__small {
                     width: 15%;
                 }
             }
@@ -91,7 +91,7 @@
 
 #account-edit-cancel-button {
     position: relative;
-    .flex-row-center();
+    .flex-row__center();
     min-width: 3rem;
     max-width: 45%;
     height: 1.5rem;
@@ -99,23 +99,23 @@
     line-height: 1.5rem;
     margin-right: .5rem;
     border-radius: 2rem;
-    background-color: @gray-color;
-    box-shadow: -2px 2px 3px @shadow-dark,
-        2px -2px 3px @shadow-light;
-    .color-transition();
-    .word-ellipsis();
+    background-color: @gray-color__base;
+    box-shadow: -2px 2px 3px @shadow__dark,
+        2px -2px 3px @shadow__light;
+    .bg-color-transition();
+    .text__word-ellipsis();
     text-align: center;
 
     &:hover {
-        color: @blue-gray-color;
+        color: @blue-color__base;
     }
 
     &:active {
-        background-color: @blue-gray-color;
+        background-color: @blue-color__base;
         color: white;
     }
 
-    @media @small-screen {
+    @media @screen__small {
         font-size: 12px;
         padding: .2rem .5rem;
     }
@@ -123,30 +123,30 @@
 
 #account-edit-confirm-button {
     position: relative;
-    .flex-row-center();
+    .flex-row__center();
     min-width: 3rem;
     max-width: 45%;
     height: 1.5rem;
     padding: 2px .75rem;
     line-height: 1.5rem;
     border-radius: 2rem;
-    background-color: @gray-color;
-    box-shadow: -2px 2px 3px @shadow-dark,
-        2px -2px 3px @shadow-light;
-    .color-transition();
-    .word-ellipsis();
+    background-color: @gray-color__base;
+    box-shadow: -2px 2px 3px @shadow__dark,
+        2px -2px 3px @shadow__light;
+    .bg-color-transition();
+    .text__word-ellipsis();
     text-align: center;
 
     &:hover {
-        color: @theme-color-light;
+        color: @green-color__light;
     }
 
     &:active {
-        background-color: @theme-color-light;
+        background-color: @green-color__light;
         color: white;
     }
 
-    @media @small-screen {
+    @media @screen__small {
         font-size: 12px;
         padding: .2rem .5rem;
     }

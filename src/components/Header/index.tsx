@@ -4,7 +4,7 @@ import MySelect from '@/components/MySelect'
 import { ListIcon } from '@/components/Icon'
 import './Header.less'
 
-function ShowNavigatorBtn() {
+function ShowNavigatorButton() {
     const navDisplay = useAppSelector(selectNavDisplay)
     const dispatch = useAppDispatch()
 
@@ -17,9 +17,9 @@ function ShowNavigatorBtn() {
     }
 
     return (
-        <div id="show-navigator-bar-button" className="custom-button" onClick={handleClick}>
-            <ListIcon />
-        </div>
+        <div id="show-navigator-bar-button" className=.button__base" onClick={handleClick}>
+            < ListIcon />
+        </div >
     )
 }
 
@@ -35,7 +35,7 @@ function MessageBar() {
 function Header() {
     return (
         <div id="language-bar">
-            <ShowNavigatorBtn />
+            <ShowNavigatorButton />
             <MessageBar />
             <MySelect />
         </div>

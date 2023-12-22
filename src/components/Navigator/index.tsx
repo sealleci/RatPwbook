@@ -5,7 +5,7 @@ import SearchBar from '@/components/SearchBar'
 import { PlusIcon } from '@/components/Icon'
 import './Navigator.less'
 
-function HideNavigatorBtn() {
+function HideNavigatorButton() {
     const dispatch = useAppDispatch()
 
     function handleClick() {
@@ -58,7 +58,7 @@ function Navigator() {
                         {/* <div className="system-card system-card-active">QQ</div> */}
                     </div>
                 </div>
-                <HideNavigatorBtn />
+                <HideNavigatorButton />
             </div>
         </div>
     )

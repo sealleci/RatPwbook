@@ -7,7 +7,7 @@
     width: 100%;
     padding: 4px 0;
 
-    @media @small-screen {
+    @media @screen__small {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -16,8 +16,8 @@
     }
 
     #navigator-content {
-        @media @small-screen {
-            .flex-column-center();
+        @media @screen__small {
+            .flex-column__center();
             align-items: flex-start;
             position: relative;
             z-index: 150;
@@ -28,15 +28,15 @@
         }
 
         #hide-navigator-button-wrap {
-            @media @small-screen {
-                .flex-column-center();
+            @media @screen__small {
+                .flex-column__center();
                 align-items: flex-start;
                 justify-content: center;
                 position: absolute;
                 height: 100vh;
-                left: calc(@navigator-max-width + 5rem);
+                left: calc(@navigator__max-width + 5rem);
                 top: 0;
-                border-left: 8px solid @gray-color;
+                border-left: 8px solid @gray-color__base;
 
                 #hide-navigator-button {
                     @arc-size: 1.5rem;
@@ -45,18 +45,18 @@
                     align-items: center;
                     width: 1.5rem;
                     height: 15vh;
-                    background-color: @gray-color;
+                    background-color: @gray-color__base;
                     border-radius: 0 15px 15px 0;
                     cursor: pointer;
-                    .color-transition();
+                    .bg-color-transition();
 
                     &>div {
-                        .color-transition();
+                        .bg-color-transition();
                         height: 0;
                         width: 0;
                         border-width: .5rem;
                         border-style: solid;
-                        border-color: transparent @font-color-default transparent transparent;
+                        border-color: transparent @font-color__base transparent transparent;
                     }
 
                     &::before {
@@ -65,10 +65,10 @@
                         height: calc(@arc-size * 2);
                         width: @arc-size;
                         top: calc(@arc-size * -1 * 2);
-                        // background-color: @blue-gray-color;
+                        // background-color: @blue-color__base;
                         z-index: -1;
                         border-radius: 15px;
-                        box-shadow: calc(@arc-size * -1 / 2) calc(-@arc-size * -1 / 2) 0px @gray-color;
+                        box-shadow: calc(@arc-size * -1 / 2) calc(-@arc-size * -1 / 2) 0px @gray-color__base;
                     }
 
                     &::after {
@@ -77,15 +77,15 @@
                         height: calc(@arc-size * 2);
                         width: @arc-size;
                         bottom: calc(@arc-size * -1 * 2);
-                        // background-color: @blue-gray-color;
+                        // background-color: @blue-color__base;
                         z-index: -1;
                         border-radius: 15px;
-                        box-shadow: calc(@arc-size * -1 / 2) calc(-@arc-size / 2) 0px @gray-color;
+                        box-shadow: calc(@arc-size * -1 / 2) calc(-@arc-size / 2) 0px @gray-color__base;
                     }
 
                     &:hover {
                         &>div {
-                            border-color: transparent @blue-gray-color transparent transparent;
+                            border-color: transparent @blue-color__base transparent transparent;
                         }
                     }
                 }
@@ -104,20 +104,20 @@
             @shadow-bias: 2px;
 
             position: relative;
-            .flex-row-center();
+            .flex-row__center();
             // min-height: 3rem;
             width: 100%;
             // height: 100%;
             padding: 4px 0 0 0;
 
-            @media @small-screen {
+            @media @screen__small {
                 padding: 0;
-                width: calc(@navigator-max-width + 5rem);
+                width: calc(@navigator__max-width + 5rem);
                 // height: 95%;
                 flex-grow: 1;
                 flex-direction: column;
                 align-items: flex-start;
-                background-color: @gray-color;
+                background-color: @gray-color__base;
                 overflow-y: hidden;
             }
 
@@ -131,7 +131,7 @@
                 // padding: 5px 0;
                 overflow-x: scroll;
 
-                @media @small-screen {
+                @media @screen__small {
                     flex-direction: column;
                     width: 100%;
                     // height: 20vh;
@@ -141,64 +141,63 @@
                 }
 
                 &::-webkit-scrollbar {
-                    height: @scroll-bar-size;
+                    height: @scroll-bar__width;
                 }
 
-                .scroll-bar-style();
+                .scroll-bar__base();
             }
 
             .system-card {
                 display: block;
-                // .flex-row-center();
+                // .flex-row__center();
                 flex-shrink: 0;
                 min-width: calc(@card-size - @card-padding * 2);
-                max-width: @navigator-max-width;
+                max-width: @navigator__max-width;
                 height: @card-size;
                 margin: @card-margin calc(@card-margin * 1.5) calc(@card-margin * 2) calc(@card-margin * 1.5);
                 padding: 0 @card-padding;
-                .font-general();
-                .text-unselectable();
+                .font__base();
+                .text__unselectable();
                 line-height: @card-size;
                 text-align: center;
                 text-overflow: ellipsis;
                 overflow-x: hidden;
                 white-space: nowrap;
-                background-color: @gray-color;
+                background-color: @gray-color__base;
                 backdrop-filter: blur(11px);
                 -webkit-backdrop-filter: blur(11px);
                 // box-shadow: rgba(142, 142, 142, 0.8) 0px 6px 15px 0px;
                 // -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
-                box-shadow: calc(-1 * @shadow-bias) @shadow-bias @card-shadow-distance @shadow-dark,
-                    @shadow-bias calc(-1 * @shadow-bias) @card-shadow-distance @shadow-light;
+                box-shadow: calc(-1 * @shadow-bias) @shadow-bias @card-shadow-distance @shadow__dark,
+                    @shadow-bias calc(-1 * @shadow-bias) @card-shadow-distance @shadow__light;
 
                 border-radius: 10px;
                 -webkit-border-radius: 10px;
                 // transition: background-color .1s, color .1s;
-                .color-transition();
+                .bg-color-transition();
                 cursor: pointer;
 
                 &:hover,
                 &.system-card-active {
-                    background-color: rgba(@pink-color, @opacity-2);
+                    background-color: rgba(@pink-color__base, @opacity-2);
                     color: white;
                 }
 
                 &:active {
-                    background-color: rgba(@pink-color, @opacity-3);
+                    background-color: rgba(@pink-color__base, @opacity-3);
                     color: white;
                 }
 
-                @media @small-screen {
-                    width: @navigator-max-width;
+                @media @screen__small {
+                    width: @navigator__max-width;
                 }
             }
 
             #system-add-card-wrap {
                 position: relative;
                 overflow-x: scroll;
-                // .outline();
 
-                @media @small-screen {
+                @media @screen__small {
                     height: calc(@card-size + @card-margin * 3 + @card-padding);
                     width: 100%;
                     display: flex;
@@ -209,16 +208,16 @@
                 }
 
                 &::-webkit-scrollbar {
-                    height: @scroll-bar-size;
+                    height: @scroll-bar__width;
                     visibility: hidden;
                 }
 
                 #system-add-card {
-                    .flex-row-center();
+                    .flex-row__center();
                     margin-left: @card-shadow-distance;
-                    background-color: rgba(@pink-color, @opacity-1);
+                    background-color: rgba(@pink-color__base, @opacity-1);
 
-                    @media @small-screen {
+                    @media @screen__small {
                         margin-left: 0;
                         height: 3rem;
                         width: 3rem;
@@ -228,11 +227,11 @@
                     }
 
                     &:hover {
-                        background-color: rgba(@pink-color, @opacity-2);
+                        background-color: rgba(@pink-color__base, @opacity-2);
                     }
 
                     &:active {
-                        background-color: rgba(@pink-color, @opacity-3);
+                        background-color: rgba(@pink-color__base, @opacity-3);
                     }
 
                     .plus_icon {

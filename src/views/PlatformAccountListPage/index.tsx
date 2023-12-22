@@ -24,15 +24,15 @@ function PlatformListPage() {
                         <input className="copy-field" value="weixin.com/home?spam=123&a=456" readOnly />
                     </div>
                     <div className="system-delete-wrap">
-                        <div className="system-delete-button custom-button" data-l10n="SYSTEM_DELETE_BUTTON"
+                        <div className="system-delete-button.button__base" data-l10n="SYSTEM_DELETE_BUTTON"
                             style={{ display: 'block' }}>
                             删除</div>
                         <div className="system-delete-check" style={{ display: 'none' }}>
-                            <div className="system-delete-cancel-button custom-button"
+                            <div className="system-delete-cancel-button.button__base"
                                 data-l10n="SYSTEM_DELETE_CANCEL_BUTTON">
                                 Cancel
                             </div>
-                            <div className="system-delete-confirm-button custom-button"
+                            <div className="system-delete-confirm-button.button__base"
                                 data-l10n="SYSTEM_DELETE_CONFIRM_BUTTON">
                                 确认删除
                             </div>
@@ -82,7 +82,7 @@ function PlatformListPage() {
                             </div>
                             <input className="account-field-value copy-field" value="1234567890" readOnly />
                         </div>
-                        <div className="account-detail-button custom-button" onClick={redirectToDetail}>
+                        <div className="account-detail-button.button__base" onClick={redirectToDetail}>
                             <div data-l10n="ACCOUNT_DETAIL_BUTTON">
                                 查看详情
                             </div>

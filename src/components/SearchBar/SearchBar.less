@@ -3,16 +3,15 @@
 #navigator-search-bar {
     position: relative;
     @length: 1.5rem;
-    .flex-row-center();
+    .flex-row__center();
     width: 100%;
     padding: 1px 0;
-    // outline: 1px solid gray;
 
-    @media @small-screen {
-        width: calc(@navigator-max-width + 5rem);
+    @media @screen__small {
+        width: calc(@navigator__max-width + 5rem);
         z-index: 100;
         padding-top: .25rem;
-        background-color: @gray-color;
+        background-color: @gray-color__base;
 
         &:focus-within {
             filter: none !important;
@@ -24,10 +23,10 @@
     }
 
     #navigator-search-input-wrap {
-        .flex-row-center();
+        .flex-row__center();
         width: 40%;
 
-        @media @small-screen {
+        @media @screen__small {
             width: 80%;
             margin: .25rem 0;
         }
@@ -37,16 +36,16 @@
             height: @length;
             margin: 0;
             padding: 0;
-            .font-general();
+            .font__base();
             border: 0;
             outline: 0;
-            background-color: @white-color;
-            caret-color: @theme-color-light;
-            // color: @font-color-default;
+            background-color: @white-color__base;
+            caret-color: @green-color__light;
+            // color: @font-color__base;
             // color: rgba(black, .8);
 
             &::selection {
-                background-color: @theme-color-light;
+                background-color: @green-color__light;
                 color: white;
             }
         }
@@ -57,7 +56,7 @@
             @icon-color-active: rgb(135, 133, 133);
             @transition-time: .1s;
 
-            background-color: @white-color;
+            background-color: @white-color__base;
 
             &>div:nth-child(1) {
                 border-color: @icon-color;
@@ -98,8 +97,7 @@
     .navigator-search-bar-end {
         width: 25%;
         height: @length;
-        // outline: 1px solid black;
-        background-color: @white-color;
+        background-color: @white-color__base;
 
         &#navigator-search-bar-left {
             border-radius: @length 0 0 @length;
@@ -109,7 +107,7 @@
             border-radius: 0 @length @length 0;
         }
 
-        @media @small-screen {
+        @media @screen__small {
             width: 5%;
         }
     }

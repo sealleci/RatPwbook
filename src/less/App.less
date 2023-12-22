@@ -3,7 +3,7 @@
 .app__container {
     grid-area: main;
     position: relative;
-    .flex-column-center();
+    .flex-column__center();
     flex-grow: 1;
     width: 100%;
     overflow-y: hidden;
@@ -16,18 +16,10 @@
         margin: 0;
         border: 0;
         outline: 0;
-        .font-general();
+        .font__base();
         background-color: transparent;
         cursor: pointer;
         -webkit-user-drag: none;
-
-        // &:hover {
-        //     outline: 1px solid black;
-        // }
-
-        // &:active {
-        //     outline: 1px solid red;
-        // }
 
         &::selection {
             background-color: transparent;
@@ -35,7 +27,7 @@
     }
 
     .account-name {
-        .flex-row-center();
+        .flex-row__center();
         width: 100%;
         margin: 1.5rem 0 .75rem 0;
 
@@ -44,19 +36,16 @@
             padding: 2px .25rem;
             text-align: center;
             border-radius: 2rem;
-            .color-transition();
+            .bg-color-transition();
             font-weight: bold;
 
             &:hover {
-                // outline: 2px solid @theme-color;
-                // background-color: @theme-color;
-                color: @theme-color-light;
-                outline: 1px solid @theme-color-light ;
+                color: @green-color__light;
+                outline: 1px solid @green-color__light ;
             }
 
             &:active {
-                // background-color: red;
-                background-color: @theme-color-light;
+                background-color: @green-color__light;
                 color: white;
             }
         }
@@ -79,11 +68,11 @@
             align-items: center;
             width: 28%;
             margin-right: .5rem;
-            .text-unselectable();
-            color: rgba(@font-color-default, .8);
+            .text__unselectable();
+            color: rgba(@font-color__base, .8);
 
-            // outline: 1px solid black;
-            // border-left: 4px solid @theme-color;
+            //outline: 1px solid black;
+            // border-left: 4px solid @green-color__base;
             // &::before {
             //     @dot-size: 10px;
             //     position: absolute;
@@ -93,9 +82,9 @@
             //     height: @dot-size;
             //     width: @dot-size;
             //     border-radius: 50%;
-            //     background-color: @gray-color;
-            //     box-shadow: inset -2px 2px 3px @shadow-dark,
-            //         inset 2px -2px 3px @shadow-light;
+            //     background-color: @gray-color__base;
+            //     box-shadow: inset -2px 2px 3px @shadow__dark,
+            //         inset 2px -2px 3px @shadow__light;
             // }
 
             &>div {
@@ -109,17 +98,17 @@
                 }
 
                 &::-webkit-scrollbar-track {
-                    border-radius: @scroll-bar-size;
+                    border-radius: @scroll-bar__width;
                     background-color: transparent;
                 }
 
                 &::-webkit-scrollbar-thumb {
-                    background-color: @pink-color;
-                    border-radius: @scroll-bar-size;
+                    background-color: @pink-color__base;
+                    border-radius: @scroll-bar__width;
                 }
 
                 &::-webkit-scrollbar-thumb:hover {
-                    background-color: @pink-color-dark;
+                    background-color: @pink-color__dark;
                 }
             }
         }
@@ -134,36 +123,35 @@
             display: flex;
             justify-content: flex-start;
             width: @value-width;
-            padding: .25rem @input-padding-horizontal;
+            padding: .25rem @input__horizontal-padding;
             border-radius: 2rem;
-            background: @gray-color;
-            box-shadow: inset -3px 3px 3px @shadow-dark,
-                inset 3px -3px 3px @shadow-light;
+            background: @gray-color__base;
+            box-shadow: inset -3px 3px 3px @shadow__dark,
+                inset 3px -3px 3px @shadow__light;
 
             &.edit-field {
-                caret-color: @blue-gray-color;
+                caret-color: @blue-color__base;
 
                 &::selection {
-                    background-color: @blue-gray-color;
+                    background-color: @blue-color__base;
                     color: white;
                 }
             }
 
             &.copy-field {
-                .color-transition();
+                .bg-color-transition();
 
                 &:hover {
                     box-shadow: inset -3px 3px 3px #d49eb3,
                         inset 3px -3px 3px #ffdefd;
-                    background-color: rgba(@pink-color-light, 1);
-                    // outline: 2px solid @pink-color;
+                    background-color: rgba(@pink-color__light, 1);
                 }
 
                 &:active {
                     @shadow-opacity: 1;
                     box-shadow: inset -3px 3px 3px rgba(#bd5b7d, @shadow-opacity),
                         inset 3px -3px 3px rgba(#ff9bd5, @shadow-opacity);
-                    background-color: rgba(@pink-color, @shadow-opacity);
+                    background-color: rgba(@pink-color__base, @shadow-opacity);
                     color: rgba(white, .8);
                 }
             }
@@ -171,32 +159,31 @@
 
         .account-secret-field-wrap {
             position: relative;
-            .flex-row-center();
+            .flex-row__center();
             justify-content: space-between;
-            width: calc(@value-width + @input-padding-horizontal * 2);
-            // outline: 1px solid black;
+            width: calc(@value-width + @input__horizontal-padding * 2);
 
             .secret-edit-field {
                 position: relative;
-                width: calc(100% - @input-padding-horizontal * 2);
-                caret-color: @theme-color-light;
+                width: calc(100% - @input__horizontal-padding * 2);
+                caret-color: @green-color__light;
 
                 &::selection {
-                    background-color: @theme-color-light;
+                    background-color: @green-color__light;
                     color: white;
                 }
 
                 &[type="password"] {
                     &::selection {
                         background-color: transparent;
-                        color: @font-color-default;
+                        color: @font-color__base;
                     }
                 }
             }
 
             .account-secret-field-value {
                 position: relative;
-                width: calc(100% - @input-padding-horizontal * 2);
+                width: calc(100% - @input__horizontal-padding * 2);
                 border-radius: 2rem;
                 overflow: hidden;
 
@@ -205,7 +192,7 @@
                     z-index: 60;
                     height: 100%;
                     width: 100%;
-                    background-color: @font-color-default-light;
+                    background-color: @font-color__light;
                     // background: linear-gradient(225deg, #02c393, #02a47b);
                     border-radius: 3rem;
                     transition: width .4s;
@@ -230,8 +217,6 @@
                 cursor: pointer;
                 opacity: .8;
                 transition: opacity .1s;
-                // overflow: hidden;
-                // outline: 1px solid red;
 
                 &:hover {
                     opacity: .9;
@@ -240,21 +225,19 @@
                 &:active {
                     opacity: 1;
                 }
-
-                // outline: 1px solid black;
             }
         }
     }
 
     .page-header {
         position: relative;
-        .flex-row-center();
+        .flex-row__center();
         width: 100%;
         // min-height: 1.75rem;
         margin: 1rem 0 .75rem 0;
-        background-color: @gray-color;
-        // box-shadow: inset -2px 2px 3px @shadow-dark,
-        //     inset 2px -2px 3px @shadow-light;
+        background-color: @gray-color__base;
+        // box-shadow: inset -2px 2px 3px @shadow__dark,
+        //     inset 2px -2px 3px @shadow__light;
         border-radius: 2rem;
 
         // &:hover {
@@ -266,11 +249,11 @@
             width: 52%;
             margin: 0;
 
-            @media @small-screen {
+            @media @screen__small {
                 width: 45%;
             }
 
-            @media @middle-screen {
+            @media @screen__middle {
                 width: 45%;
             }
         }
@@ -278,7 +261,7 @@
         .page-button-wrap {
             width: 34%;
             position: absolute;
-            .flex-row-center();
+            .flex-row__center();
             justify-content: flex-end;
             padding: 0 5px;
             right: 0px;
@@ -286,15 +269,15 @@
     }
 
     .page-body {
-        .flex-row-center();
+        .flex-row__center();
         position: relative;
         justify-content: space-between;
         height: 100%;
         width: 100%;
         overflow-y: hidden;
 
-        @media @small-screen {
-            .flex-column-center();
+        @media @screen__small {
+            .flex-column__center();
             justify-content: flex-start;
             overflow-y: scroll;
 
@@ -302,21 +285,21 @@
                 width: .75rem;
             }
 
-            .scroll-bar-style();
+            .scroll-bar__base();
         }
 
         .account-main-part {
-            .flex-row-center();
+            .flex-row__center();
             height: 100%;
             width: 66%;
 
-            @media @middle-screen {
-                .flex-column-center();
+            @media @screen__middle {
+                .flex-column__center();
                 width: 45%;
             }
 
-            @media @small-screen {
-                .flex-column-center();
+            @media @screen__small {
+                .flex-column__center();
                 height: fit-content;
                 width: 100%;
             }
@@ -324,34 +307,34 @@
             .account-infomation-part {
                 width: 50%;
 
-                @media @big-screen {
-                    .flex-column-center();
+                @media @screen__big {
+                    .flex-column__center();
                     height: 100%;
                     justify-content: flex-start;
                 }
 
-                @media @middle-screen {
+                @media @screen__middle {
                     width: 100%;
                 }
 
-                @media @small-screen {
+                @media @screen__small {
                     width: 100%;
                 }
             }
 
             .account-password-part {
-                .flex-column-center();
+                .flex-column__center();
                 // justify-content: center;
                 width: 50%;
                 height: 100%;
                 overflow-y: hidden;
 
-                @media @middle-screen {
+                @media @screen__middle {
                     width: 100%;
                     flex-grow: 1;
                 }
 
-                @media @small-screen {
+                @media @screen__small {
                     width: 100%;
                     height: fit-content;
                 }
@@ -361,12 +344,12 @@
                 }
 
                 .past-passwords {
-                    .flex-column-center();
+                    .flex-column__center();
                     flex-grow: 1;
                     overflow-y: hidden;
                     width: 100%;
 
-                    @media @small-screen {
+                    @media @screen__small {
                         overflow-y: visible;
                     }
 
@@ -375,14 +358,14 @@
                     // }
 
                     .past-passwords-list {
-                        .flex-column-center();
+                        .flex-column__center();
                         justify-content: flex-start;
                         max-height: 100%;
                         width: 100%;
                         overflow-y: scroll;
                         overflow-x: hidden;
 
-                        @media @small-screen {
+                        @media @screen__small {
                             height: fit-content;
                             overflow-y: visible;
                         }
@@ -391,7 +374,7 @@
                             width: .75rem;
                         }
 
-                        .scroll-bar-style();
+                        .scroll-bar__base();
 
                         .account-field {
                             @scroll-bar-offset: .5rem;
@@ -399,19 +382,19 @@
                             margin: .25rem 0 .75rem 0;
                             left: @scroll-bar-offset;
 
-                            @media @small-screen {
+                            @media @screen__small {
                                 left: 0;
                             }
 
                             // .account-field-key {}
 
                             .account-secret-field-wrap {
-                                @media @big-screen {
-                                    width: calc(52% + @input-padding-horizontal * 2 + @scroll-bar-offset);
+                                @media @screen__big {
+                                    width: calc(52% + @input__horizontal-padding * 2 + @scroll-bar-offset);
                                 }
 
-                                @media @middle-screen {
-                                    width: calc(52% + @input-padding-horizontal * 2 + @scroll-bar-offset);
+                                @media @screen__middle {
+                                    width: calc(52% + @input__horizontal-padding * 2 + @scroll-bar-offset);
 
                                 }
                             }
@@ -422,16 +405,16 @@
         }
 
         .account-protection-part {
-            .flex-column-center();
+            .flex-column__center();
             justify-content: flex-start;
             width: 33%;
             height: 100%;
 
-            @media @middle-screen {
+            @media @screen__middle {
                 width: 45%;
             }
 
-            @media @small-screen {
+            @media @screen__small {
                 width: 100%;
                 height: max-content;
             }
@@ -443,12 +426,12 @@
                 padding: 0;
 
                 .account-field-key {
-                    @media @big-screen {
+                    @media @screen__big {
                         width: 100%;
                         justify-content: center;
                     }
 
-                    @media @middle-screen {
+                    @media @screen__middle {
                         width: 100%;
                         justify-content: center;
                     }
@@ -456,11 +439,11 @@
                 }
 
                 .account-field-empty {
-                    @media @big-screen {
+                    @media @screen__big {
                         display: none;
                     }
 
-                    @media @middle-screen {
+                    @media @screen__middle {
                         display: none;
                     }
                 }
@@ -474,7 +457,7 @@
                 overflow-y: scroll;
                 overflow-x: hidden;
 
-                @media @small-screen {
+                @media @screen__small {
                     overflow-y: visible;
                 }
 
@@ -482,11 +465,11 @@
                     width: .75rem;
                 }
 
-                .scroll-bar-style();
+                .scroll-bar__base();
 
                 .protection-add-button {
                     position: relative;
-                    .flex-row-center();
+                    .flex-row__center();
                     width: 100%;
                     left: 5%;
 
@@ -495,26 +478,26 @@
                         width: 3rem;
                         border-radius: 2rem;
                         margin: 3px 0;
-                        background-color: @gray-color;
-                        box-shadow: -2px 2px 3px @shadow-dark,
-                            2px -2px 3px @shadow-light;
-                        .color-transition();
+                        background-color: @gray-color__base;
+                        box-shadow: -2px 2px 3px @shadow__dark,
+                            2px -2px 3px @shadow__light;
+                        .bg-color-transition();
                         opacity: .7;
 
                         &>div {
-                            .color-transition();
-                            background-color: @font-color-default;
+                            .bg-color-transition();
+                            background-color: @font-color__base;
                         }
 
                         &:hover {
                             &>div {
-                                background-color: @blue-gray-color;
+                                background-color: @blue-color__base;
                             }
 
                         }
 
                         &:active {
-                            background-color: @blue-gray-color;
+                            background-color: @blue-color__base;
 
                             &>div {
                                 background-color: white;
@@ -525,7 +508,7 @@
 
                 .account-protection-item {
                     position: relative;
-                    .flex-row-center();
+                    .flex-row__center();
                     align-items: flex-start;
                     width: 100%;
                     margin: .25rem 0 .75rem 0;
@@ -533,19 +516,19 @@
                     .protection-delete-button {
                         @red-color: rgba(red, .6);
                         position: relative;
-                        .flex-row-center();
+                        .flex-row__center();
                         width: 16%;
                         height: 100%;
                         padding: .1rem .25rem;
                         border-radius: 2rem;
-                        background-color: @gray-color;
-                        box-shadow: -2px 2px 3px @shadow-dark,
-                            2px -2px 3px @shadow-light;
-                        .color-transition();
-                        .word-ellipsis();
+                        background-color: @gray-color__base;
+                        box-shadow: -2px 2px 3px @shadow__dark,
+                            2px -2px 3px @shadow__light;
+                        .bg-color-transition();
+                        .text__word-ellipsis();
                         text-align: center;
 
-                        @media @small-screen {
+                        @media @screen__small {
                             left: -6px;
                         }
 
@@ -560,29 +543,29 @@
                     }
 
                     .account-protection-number {
-                        .flex-row-center();
+                        .flex-row__center();
                         justify-content: flex-end;
                         width: 12%;
                         height: 1.2rem;
                         margin-right: 0.5rem;
-                        .text-unselectable();
-                        .font-general();
-                        color: rgba(@font-color-default, .8);
+                        .text__unselectable();
+                        .font__base();
+                        color: rgba(@font-color__base, .8);
 
-                        @media @small-screen {
+                        @media @screen__small {
                             width: 28%;
                         }
                     }
 
                     .account-field {
                         width: 60%;
-                        .flex-column-center();
+                        .flex-column__center();
                         align-items: flex-start;
                         justify-content: flex-start;
                         margin: 0;
 
-                        @media @small-screen {
-                            width: calc(52% + @input-padding-horizontal * 2);
+                        @media @screen__small {
+                            width: calc(52% + @input__horizontal-padding * 2);
                         }
 
                         .account-field-question {
@@ -590,14 +573,14 @@
                             min-height: 1.2rem;
                             padding: 0;
                             margin-bottom: .5rem;
-                            .break-word();
+                            .text__break-word();
                             line-height: 1.2rem;
                             // flex-grow: 1;
-                            // .outline();
+                            // outline();
 
                             &>div::selection {
                                 color: white;
-                                background-color: @theme-color-light;
+                                background-color: @green-color__light;
                             }
 
                             .edit-field {
@@ -608,8 +591,7 @@
                         .account-secret-field-wrap {
                             width: 95%;
 
-                            // .outline();
-                            @media @small-screen {
+                            @media @screen__small {
                                 width: 93%;
                             }
                         }
@@ -623,16 +605,16 @@
 
     #account-detail-page,
     #account-edit-page {
-        .flex-column-center();
+        .flex-column__center();
         position: relative;
         z-index: 80;
         width: 90%;
         height: 100%;
         margin-top: .5rem;
-        background-color: @gray-color;
-        // background: linear-gradient(180deg, @gray-color, @blue-gray-color);
-        // box-shadow: inset -5px 5px 10px@shadow-dark,
-        //     inset 5px -5px 10px @shadow-light;
+        background-color: @gray-color__base;
+        // background: linear-gradient(180deg, @gray-color__base, @blue-color__base);
+        // box-shadow: inset -5px 5px 10px@shadow__dark,
+        //     inset 5px -5px 10px @shadow__light;
         overflow-x: hidden;
         overflow-y: hidden;
 
@@ -650,5 +632,5 @@
     grid-area: footer;
     width: 100%;
     height: 1rem;
-    // background-color: @theme-color;
+    // background-color: @green-color__base;
 }
