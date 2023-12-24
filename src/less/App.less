@@ -1,9 +1,9 @@
 @import (reference) "@/less/general.less";
 
 .app__container {
-    grid-area: main;
-    position: relative;
     .flex-column__center();
+
+    position: relative;
     flex-grow: 1;
     width: 100%;
     overflow-y: hidden;
@@ -11,12 +11,13 @@
     input.copy-field,
     input.edit-field,
     input.secret-edit-field {
+        .font__base();
+
         max-width: 100%;
         padding: 0;
         margin: 0;
         border: 0;
         outline: 0;
-        .font__base();
         background-color: transparent;
         cursor: pointer;
         -webkit-user-drag: none;
@@ -28,15 +29,17 @@
 
     .account-name {
         .flex-row__center();
+
         width: 100%;
         margin: 1.5rem 0 .75rem 0;
 
         input.copy-field {
+            .bg-color-transition();
+
             width: 42%;
             padding: 2px .25rem;
             text-align: center;
             border-radius: 2rem;
-            .bg-color-transition();
             font-weight: bold;
 
             &:hover {
@@ -52,7 +55,8 @@
     }
 
     .account-field {
-        @value-width: 52%;
+        @value__width: 52%;
+
         position: relative;
         display: flex;
         flex-direction: row;
@@ -62,16 +66,16 @@
         margin: .75rem 0;
 
         .account-field-key {
+            .text__unselectable();
+
             display: flex;
             position: relative;
             justify-content: flex-end;
             align-items: center;
             width: 28%;
             margin-right: .5rem;
-            .text__unselectable();
             color: rgba(@font-color__base, .8);
 
-            //outline: 1px solid black;
             // border-left: 4px solid @green-color__base;
             // &::before {
             //     @dot-size: 10px;
@@ -122,7 +126,7 @@
             height: 1rem;
             display: flex;
             justify-content: flex-start;
-            width: @value-width;
+            width: @value__width;
             padding: .25rem @input__horizontal-padding;
             border-radius: 2rem;
             background: @gray-color__base;
@@ -149,6 +153,7 @@
 
                 &:active {
                     @shadow-opacity: 1;
+
                     box-shadow: inset -3px 3px 3px rgba(#bd5b7d, @shadow-opacity),
                         inset 3px -3px 3px rgba(#ff9bd5, @shadow-opacity);
                     background-color: rgba(@pink-color__base, @shadow-opacity);
@@ -158,10 +163,11 @@
         }
 
         .account-secret-field-wrap {
-            position: relative;
             .flex-row__center();
+
+            position: relative;
             justify-content: space-between;
-            width: calc(@value-width + @input__horizontal-padding * 2);
+            width: calc(@value__width + @input__horizontal-padding * 2);
 
             .secret-edit-field {
                 position: relative;
@@ -193,7 +199,6 @@
                     height: 100%;
                     width: 100%;
                     background-color: @font-color__light;
-                    // background: linear-gradient(225deg, #02c393, #02a47b);
                     border-radius: 3rem;
                     transition: width .4s;
 
@@ -209,14 +214,15 @@
 
             .eye-icon-wrap {
                 @shadow-inset: 4px;
+
                 flex-shrink: 0;
                 width: 1.5rem;
                 height: 1.5rem;
                 margin-left: .5rem;
                 border-radius: 50%;
-                cursor: pointer;
                 opacity: .8;
                 transition: opacity .1s;
+                cursor: pointer;
 
                 &:hover {
                     opacity: .9;
@@ -230,15 +236,16 @@
     }
 
     .page-header {
-        position: relative;
         .flex-row__center();
-        width: 100%;
+
+        position: relative;
         // min-height: 1.75rem;
+        width: 100%;
         margin: 1rem 0 .75rem 0;
         background-color: @gray-color__base;
+        border-radius: 2rem;
         // box-shadow: inset -2px 2px 3px @shadow__dark,
         //     inset 2px -2px 3px @shadow__light;
-        border-radius: 2rem;
 
         // &:hover {
         // background-color: rgba(black, .02);
@@ -307,7 +314,7 @@
             .account-infomation-part {
                 width: 50%;
 
-                @media @screen__big {
+                @media @screen__large {
                     .flex-column__center();
                     height: 100%;
                     justify-content: flex-start;
@@ -389,7 +396,7 @@
                             // .account-field-key {}
 
                             .account-secret-field-wrap {
-                                @media @screen__big {
+                                @media @screen__large {
                                     width: calc(52% + @input__horizontal-padding * 2 + @scroll-bar-offset);
                                 }
 
@@ -426,7 +433,7 @@
                 padding: 0;
 
                 .account-field-key {
-                    @media @screen__big {
+                    @media @screen__large {
                         width: 100%;
                         justify-content: center;
                     }
@@ -439,7 +446,7 @@
                 }
 
                 .account-field-empty {
-                    @media @screen__big {
+                    @media @screen__large {
                         display: none;
                     }
 
@@ -507,14 +514,16 @@
                 }
 
                 .account-protection-item {
-                    position: relative;
                     .flex-row__center();
+
+                    position: relative;
                     align-items: flex-start;
                     width: 100%;
                     margin: .25rem 0 .75rem 0;
 
                     .protection-delete-button {
                         @red-color: rgba(red, .6);
+
                         position: relative;
                         .flex-row__center();
                         width: 16%;
@@ -544,12 +553,13 @@
 
                     .account-protection-number {
                         .flex-row__center();
+                        .text__unselectable();
+                        .font__base();
+
                         justify-content: flex-end;
                         width: 12%;
                         height: 1.2rem;
                         margin-right: 0.5rem;
-                        .text__unselectable();
-                        .font__base();
                         color: rgba(@font-color__base, .8);
 
                         @media @screen__small {
@@ -558,8 +568,9 @@
                     }
 
                     .account-field {
-                        width: 60%;
                         .flex-column__center();
+
+                        width: 60%;
                         align-items: flex-start;
                         justify-content: flex-start;
                         margin: 0;
@@ -569,14 +580,14 @@
                         }
 
                         .account-field-question {
+                            .text__break-word();
+
+                            // flex-grow: 1;
                             width: 100%;
                             min-height: 1.2rem;
                             padding: 0;
                             margin-bottom: .5rem;
-                            .text__break-word();
                             line-height: 1.2rem;
-                            // flex-grow: 1;
-                            // outline();
 
                             &>div::selection {
                                 color: white;
@@ -606,17 +617,15 @@
     #account-detail-page,
     #account-edit-page {
         .flex-column__center();
+
         position: relative;
-        z-index: 80;
         width: 90%;
         height: 100%;
         margin-top: .5rem;
         background-color: @gray-color__base;
-        // background: linear-gradient(180deg, @gray-color__base, @blue-color__base);
-        // box-shadow: inset -5px 5px 10px@shadow__dark,
-        //     inset 5px -5px 10px @shadow__light;
         overflow-x: hidden;
         overflow-y: hidden;
+        z-index: 80;
 
         .system-wrap {
             position: relative;

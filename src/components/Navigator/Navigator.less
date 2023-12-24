@@ -1,9 +1,6 @@
 @import (reference) "@/less/general.less";
 
 #navigator-bar {
-    @small-side-width: 60%;
-
-    grid-area: navigator_bar;
     width: 100%;
     padding: 4px 0;
 
@@ -30,6 +27,7 @@
         #hide-navigator-button-wrap {
             @media @screen__small {
                 .flex-column__center();
+
                 align-items: flex-start;
                 justify-content: center;
                 position: absolute;
@@ -66,9 +64,9 @@
                         width: @arc-size;
                         top: calc(@arc-size * -1 * 2);
                         // background-color: @blue-color__base;
-                        z-index: -1;
                         border-radius: 15px;
                         box-shadow: calc(@arc-size * -1 / 2) calc(-@arc-size * -1 / 2) 0px @gray-color__base;
+                        z-index: -1;
                     }
 
                     &::after {
@@ -78,9 +76,9 @@
                         width: @arc-size;
                         bottom: calc(@arc-size * -1 * 2);
                         // background-color: @blue-color__base;
-                        z-index: -1;
                         border-radius: 15px;
                         box-shadow: calc(@arc-size * -1 / 2) calc(-@arc-size / 2) 0px @gray-color__base;
+                        z-index: -1;
                     }
 
                     &:hover {
@@ -93,42 +91,42 @@
         }
 
         #navigator-system-list-wrap {
-            // @scrollbar-height: 1rem;
-            @card-size: 3rem;
-            @card-margin: .25rem;
-            @card-padding: .5rem;
-            @card-shadow-distance: 4px;
+            @card__size: 3rem;
+            @card__margin: .25rem;
+            @card__padding: .5rem;
+            @card__shadow-distance: 4px;
+            @shadow-offset: 2px;
             @opacity-1: .5;
             @opacity-2: .65;
             @opacity-3: .9;
-            @shadow-bias: 2px;
+
+            .flex-row__center();
 
             position: relative;
-            .flex-row__center();
             // min-height: 3rem;
-            width: 100%;
             // height: 100%;
+            width: 100%;
             padding: 4px 0 0 0;
 
             @media @screen__small {
-                padding: 0;
-                width: calc(@navigator__max-width + 5rem);
-                // height: 95%;
                 flex-grow: 1;
                 flex-direction: column;
                 align-items: flex-start;
+                // height: 95%;
+                width: calc(@navigator__max-width + 5rem);
+                padding: 0;
                 background-color: @gray-color__base;
                 overflow-y: hidden;
             }
 
             #navigator-system-list {
                 position: relative;
-                // top: 9px;
-                width: calc(90% - @card-size - @card-margin * 2 - @card-shadow-distance);
                 flex-grow: 1;
                 display: flex;
                 flex-direction: row;
                 // padding: 5px 0;
+                // top: 9px;
+                width: calc(90% - @card__size - @card__margin * 2 - @card__shadow-distance);
                 overflow-x: scroll;
 
                 @media @screen__small {
@@ -148,17 +146,18 @@
             }
 
             .system-card {
-                display: block;
-                // .flex-row__center();
-                flex-shrink: 0;
-                min-width: calc(@card-size - @card-padding * 2);
-                max-width: @navigator__max-width;
-                height: @card-size;
-                margin: @card-margin calc(@card-margin * 1.5) calc(@card-margin * 2) calc(@card-margin * 1.5);
-                padding: 0 @card-padding;
                 .font__base();
                 .text__unselectable();
-                line-height: @card-size;
+                .bg-color-transition();
+
+                display: block;
+                flex-shrink: 0;
+                min-width: calc(@card__size - @card__padding * 2);
+                max-width: @navigator__max-width;
+                height: @card__size;
+                margin: @card__margin calc(@card__margin * 1.5) calc(@card__margin * 2) calc(@card__margin * 1.5);
+                padding: 0 @card__padding;
+                line-height: @card__size;
                 text-align: center;
                 text-overflow: ellipsis;
                 overflow-x: hidden;
@@ -166,15 +165,10 @@
                 background-color: @gray-color__base;
                 backdrop-filter: blur(11px);
                 -webkit-backdrop-filter: blur(11px);
-                // box-shadow: rgba(142, 142, 142, 0.8) 0px 6px 15px 0px;
-                // -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
-                box-shadow: calc(-1 * @shadow-bias) @shadow-bias @card-shadow-distance @shadow__dark,
-                    @shadow-bias calc(-1 * @shadow-bias) @card-shadow-distance @shadow__light;
-
+                box-shadow: calc(-1 * @shadow-offset) @shadow-offset @card__shadow-distance @shadow__dark,
+                    @shadow-offset calc(-1 * @shadow-offset) @card__shadow-distance @shadow__light;
                 border-radius: 10px;
                 -webkit-border-radius: 10px;
-                // transition: background-color .1s, color .1s;
-                .bg-color-transition();
                 cursor: pointer;
 
                 &:hover,
@@ -198,7 +192,7 @@
                 overflow-x: scroll;
 
                 @media @screen__small {
-                    height: calc(@card-size + @card-margin * 3 + @card-padding);
+                    height: calc(@card__size + @card__margin * 3 + @card__padding);
                     width: 100%;
                     display: flex;
                     justify-content: center;
@@ -214,7 +208,8 @@
 
                 #system-add-card {
                     .flex-row__center();
-                    margin-left: @card-shadow-distance;
+
+                    margin-left: @card__shadow-distance;
                     background-color: rgba(@pink-color__base, @opacity-1);
 
                     @media @screen__small {

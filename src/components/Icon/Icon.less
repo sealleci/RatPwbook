@@ -109,8 +109,8 @@
     }
 
     @eye-pupil__size: .6rem;
-    @eye__size-rate: 80%;
-    @eye__size: 1.5rem;
+    @eye__size: 80%;
+    @eye-wrapper__size: 1.5rem;
     @eye__color: @blue-color__base;
     @outline-width: 3px;
 
@@ -119,13 +119,13 @@
 
         position: relative;
         justify-content: center;
-        width: @eye__size;
-        height: @eye__size;
+        width: @eye-wrapper__size;
+        height: @eye-wrapper__size;
 
         &>div:nth-child(1) {
             position: absolute;
-            height: @eye__size-rate;
-            width: @eye__size-rate;
+            height: @eye__size;
+            width: @eye__size;
             border-radius: 50%;
             outline: @outline-width solid @eye__color;
         }
@@ -144,20 +144,20 @@
 
         position: relative;
         justify-content: center;
-        width: @eye__size;
-        height: @eye__size;
+        width: @eye-wrapper__size;
+        height: @eye-wrapper__size;
 
         &>div:nth-child(1) {
             position: absolute;
-            height: calc(@eye__size-rate + @outline-width * 2);
-            width: calc(@eye__size-rate + @outline-width * 2);
+            height: calc(@eye__size + @outline-width * 2);
+            width: calc(@eye__size + @outline-width * 2);
             background-color: @eye__color;
             border-radius: 50%;
         }
 
         &>div:nth-child(2) {
             position: absolute;
-            width: @eye__size-rate;
+            width: @eye__size;
             height: 4px;
             background-color: @gray-color__base;
             border-radius: 6px;

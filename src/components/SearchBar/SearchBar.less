@@ -1,9 +1,11 @@
 @import (reference) "@/less/general.less";
 
 #navigator-search-bar {
-    position: relative;
-    @length: 1.5rem;
+    @bar__width: 1.5rem;
+
     .flex-row__center();
+
+    position: relative;
     width: 100%;
     padding: 1px 0;
 
@@ -24,6 +26,7 @@
 
     #navigator-search-input-wrap {
         .flex-row__center();
+
         width: 40%;
 
         @media @screen__small {
@@ -32,17 +35,16 @@
         }
 
         input {
-            width: calc(100% - @length);
-            height: @length;
+            .font__base();
+
+            width: calc(100% - @bar__width);
+            height: @bar__width;
             margin: 0;
             padding: 0;
-            .font__base();
             border: 0;
             outline: 0;
             background-color: @white-color__base;
             caret-color: @green-color__light;
-            // color: @font-color__base;
-            // color: rgba(black, .8);
 
             &::selection {
                 background-color: @green-color__light;
@@ -51,40 +53,40 @@
         }
 
         .search_icon {
-            @icon-color: rgb(192, 192, 192);
-            @icon-color-hover: rgb(164, 164, 164);
-            @icon-color-active: rgb(135, 133, 133);
-            @transition-time: .1s;
+            @icon__color: rgb(192, 192, 192);
+            @icon__hover__color: rgb(164, 164, 164);
+            @icon__active__color: rgb(135, 133, 133);
+            @transition-duration: .1s;
 
             background-color: @white-color__base;
 
             &>div:nth-child(1) {
-                border-color: @icon-color;
-                transition: border-color @transition-time;
+                border-color: @icon__color;
+                transition: border-color @transition-duration;
             }
 
             &>div:nth-child(2) {
-                background-color: @icon-color;
-                transition: background-color @transition-time;
+                background-color: @icon__color;
+                transition: background-color @transition-duration;
             }
 
             &:hover {
                 &>div:nth-child(1) {
-                    border-color: @icon-color-hover;
+                    border-color: @icon__hover__color;
                 }
 
                 &>div:nth-child(2) {
-                    background-color: @icon-color-hover;
+                    background-color: @icon__hover__color;
                 }
             }
 
             &:active {
                 &>div:nth-child(1) {
-                    border-color: @icon-color-active;
+                    border-color: @icon__active__color;
                 }
 
                 &>div:nth-child(2) {
-                    background-color: @icon-color-active;
+                    background-color: @icon__active__color;
                 }
             }
         }
@@ -96,15 +98,15 @@
 
     .navigator-search-bar-end {
         width: 25%;
-        height: @length;
+        height: @bar__width;
         background-color: @white-color__base;
 
         &#navigator-search-bar-left {
-            border-radius: @length 0 0 @length;
+            border-radius: @bar__width 0 0 @bar__width;
         }
 
         &#navigator-search-bar-right {
-            border-radius: 0 @length @length 0;
+            border-radius: 0 @bar__width @bar__width 0;
         }
 
         @media @screen__small {

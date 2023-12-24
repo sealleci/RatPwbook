@@ -1,30 +1,31 @@
 @import (reference) "@/less/general.less";
 
 .my_select {
-    @padding_horizontal: .8rem;
-    @padding_vertical: .4rem;
-    @self_padding_bottom: .25rem;
-    @selected_height: 1.2rem;
+    @horizontal-padding: .8rem;
+    @vertical-padding: .4rem;
+    @self__padding-bottom: .25rem;
+    @select__selected__height: 1.2rem;
+    @select__width: 7rem;
     @opacity: .4;
-    @select_width: 7rem;
+
+    .flex-column__center();
 
     position: relative;
     align-items: flex-end;
-    width: @select_width;
+    width: @select__width;
     padding-right: .5rem;
-    .flex-column__center();
 
     &__container {
+        .flex-row__center();
+
         justify-content: space-between;
-        height: @selected_height;
-        padding: @self_padding_bottom;
+        height: @select__selected__height;
+        padding: @self__padding-bottom;
         border-radius: 2rem;
         background: @gray-color__base;
         box-shadow:
             -2px 2px 3px @shadow__dark,
             2px -2px 3px @shadow__light;
-
-        .flex-row__center();
 
         &>div:nth-child(1) {
             .text__word-ellipsis();
@@ -34,8 +35,8 @@
 
         &>div:nth-child(2) {
             position: relative;
-            top: calc(@padding_vertical / 2);
-            left: calc(@padding_horizontal / 2);
+            top: calc(@vertical-padding / 2);
+            left: calc(@horizontal-padding / 2);
             transform-origin: center calc(25% * 2 / 3);
             transition: transform .2s;
 
@@ -56,11 +57,11 @@
     }
 
     &__list {
+        .flex-column__center();
+
         position: relative;
         align-items: flex-end;
         position: absolute;
-
-        .flex-column__center();
 
         &>.my_select__item {
             background-color: rgba(white, @opacity);
@@ -75,13 +76,13 @@
 
     &__list>&__item,
     &__container {
-        width: @select_width;
+        .font__base();
+
+        width: @select__width;
         height: 2rem;
-        padding: 0 @padding_horizontal;
+        padding: 0 @horizontal-padding;
         box-sizing: border-box;
         cursor: pointer;
-
-        .font__base();
     }
 
     &__list>&__item:hover,
