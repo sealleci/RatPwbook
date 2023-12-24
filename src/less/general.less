@@ -31,78 +31,78 @@
 @screen__middle: ~"screen and (min-width:641px) and (max-width:1007px)";
 @screen__big: ~"screen and (min-width:1008px)";
 
-.flex-row__start {
+.flex-row__start() {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 }
 
-.flex-row__center {
+.flex-row__center() {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.flex-column__start {
+.flex-column__start() {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 
-.flex-column__center {
+.flex-column__center() {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.font__base {
+.font__base() {
     font-family: "Consolas", "STHeiti";
     font-size: 1rem;
     color: @font-color__base;
 }
 
-.text__unselectable {
+.text__unselectable() {
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
 }
 
-.text__word-ellipsis {
+.text__word-ellipsis() {
     display: block;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow-x: hidden;
 }
 
-.text__break-word {
+.text__break-word() {
     word-wrap: break-word;
     word-break: break-all;
 }
 
-.bg-color-transition {
+.bg-color-transition() {
     transition: background-color .1s, color .1s;
 }
 
-.outline__base {
+.outline__base() {
     outline: 1px solid black;
 }
 
-.elm__unclickable {
+.elm__unclickable() {
     pointer-events: none;
 }
 
-.button__base {
+.button__base() {
     .text__unselectable();
     .bg-color-transition();
 
     cursor: pointer;
 }
 
-.scroll-bar__base {
+.scroll-bar__base() {
     &::-webkit-scrollbar-track {
         background-color: @white-color__base;
         border-radius: @scroll-bar__width;

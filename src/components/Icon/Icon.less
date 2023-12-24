@@ -67,12 +67,12 @@
         @size: 1.5rem;
         @color: black;
 
+        .flex-column__center();
+
         position: relative;
         justify-content: center;
         width: @size;
         height: @size;
-
-        .flex-column__center();
 
         &>div {
             width: 1.2rem;
@@ -87,12 +87,12 @@
         @size: 1.2rem;
         @color: white;
 
+        .flex-row__center();
+
         position: relative;
         justify-content: center;
         width: @size;
         height: @size;
-
-        .flex-row__center();
 
         &>div {
             height: 100%;
@@ -108,59 +108,56 @@
         }
     }
 
-    @eye_pupil_size: .6rem;
-    @eye_rate: 80%;
-    @eye_size: 1.5rem;
-    @eye_color: @blue-color__base;
-    @outline_width: 3px;
+    @eye-pupil__size: .6rem;
+    @eye__size-rate: 80%;
+    @eye__size: 1.5rem;
+    @eye__color: @blue-color__base;
+    @outline-width: 3px;
 
     &.eye_open_icon {
-        position: relative;
-        justify-content: center;
-        width: @eye_size;
-        height: @eye_size;
-
         .flex-row__center();
 
-        &>div:nth-child(1) {
-            @eye_width: 3px;
+        position: relative;
+        justify-content: center;
+        width: @eye__size;
+        height: @eye__size;
 
+        &>div:nth-child(1) {
             position: absolute;
-            height: @eye_rate;
-            width: @eye_rate;
+            height: @eye__size-rate;
+            width: @eye__size-rate;
             border-radius: 50%;
-            outline: @outline_width solid @eye_color;
+            outline: @outline-width solid @eye__color;
         }
 
         &>div:nth-child(2) {
-            width: @eye_pupil_size;
-            height: @eye_pupil_size;
-            background-color: @eye_color;
+            width: @eye-pupil__size;
+            height: @eye-pupil__size;
+            background-color: @eye__color;
             border-radius: 50%;
         }
 
     }
 
     &.eye_close_icon {
+        .flex-row__center();
+
         position: relative;
         justify-content: center;
-        width: @eye_size;
-        height: @eye_size;
-
-        .flex-row__center();
+        width: @eye__size;
+        height: @eye__size;
 
         &>div:nth-child(1) {
             position: absolute;
-            height: calc(@eye_rate + @outline_width * 2);
-            width: calc(@eye_rate + @outline_width * 2);
-            background-color: @eye_color;
+            height: calc(@eye__size-rate + @outline-width * 2);
+            width: calc(@eye__size-rate + @outline-width * 2);
+            background-color: @eye__color;
             border-radius: 50%;
-
         }
 
         &>div:nth-child(2) {
             position: absolute;
-            width: @eye_rate;
+            width: @eye__size-rate;
             height: 4px;
             background-color: @gray-color__base;
             border-radius: 6px;
