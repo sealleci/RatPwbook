@@ -75,8 +75,8 @@
                         height: calc(@arc-size * 2);
                         width: @arc-size;
                         bottom: calc(@arc-size * -1 * 2);
-                        // background-color: @blue-color__base;
                         border-radius: 15px;
+                        // background-color: @blue-color__base;
                         box-shadow: calc(@arc-size * -1 / 2) calc(-@arc-size / 2) 0px @gray-color__base;
                         z-index: -1;
                     }
@@ -162,13 +162,12 @@
                 text-overflow: ellipsis;
                 overflow-x: hidden;
                 white-space: nowrap;
+                border-radius: 10px;
                 background-color: @gray-color__base;
                 backdrop-filter: blur(11px);
                 -webkit-backdrop-filter: blur(11px);
                 box-shadow: calc(-1 * @shadow-offset) @shadow-offset @card__shadow-distance @shadow__dark,
                     @shadow-offset calc(-1 * @shadow-offset) @card__shadow-distance @shadow__light;
-                border-radius: 10px;
-                -webkit-border-radius: 10px;
                 cursor: pointer;
 
                 &:hover,
@@ -229,7 +228,7 @@
                         background-color: rgba(@pink-color__base, @opacity-3);
                     }
 
-                    .plus_icon {
+                    .plus-icon {
                         &>div {
                             background-color: white;
                             transition: background-color .1s;

@@ -73,20 +73,20 @@ function MySelect() {
     }, [observer])
 
     return (
-        <div className={isExpended ? 'my_select my_select--expanded' : 'my_select'}>
-            <div className="my_select__container" ref={containerRef} onClick={clickContainer}>
+        <div className={isExpended ? 'my-select my-select--expanded' : 'my-select'}>
+            <div className="my-select__container" ref={containerRef} onClick={clickContainer}>
                 <div>{itemList.find(item => item.value === selectedValue)?.name}</div>
                 <div>
                     <DropDownIcon />
                 </div>
             </div>
-            <div className="my_select__modal" ref={modalRef} onClick={clickModal}>
-                <div className="my_select__list" ref={listRef}>
+            <div className="my-select__modal" ref={modalRef} onClick={clickModal}>
+                <div className="my-select__list" ref={listRef}>
                     {
                         itemList.map(
                             (item, index) => (
                                 <div
-                                    className={selectedValue === item.value ? 'my_select__item my_select__item--selected' : 'my_select__item'}
+                                    className={selectedValue === item.value ? 'my-select__item my-select__item--selected' : 'my-select__item'}
                                     onClick={(event) => clickItem(event, item.value)}
                                     data-value={item.value}
                                     key={index}

@@ -2,7 +2,7 @@ import './Icon.less'
 
 function ListIcon() {
     return (
-        <div className="list_icon custom_icon">
+        <div className="list-icon icon__base">
             <div></div>
             <div></div>
             <div></div>
@@ -12,7 +12,7 @@ function ListIcon() {
 
 function SearchIcon() {
     return (
-        <div className="search_icon custom_icon">
+        <div className="search-icon icon__base">
             <div></div>
             <div></div>
         </div>
@@ -21,7 +21,7 @@ function SearchIcon() {
 
 function PlusIcon() {
     return (
-        <div className="plus_icon custom_icon">
+        <div className="plus-icon icon__base">
             <div></div>
             <div></div>
         </div>
@@ -30,7 +30,7 @@ function PlusIcon() {
 
 function DetailIcon() {
     return (
-        <div className="detail_icon custom_icon">
+        <div className="detail-icon icon__base">
             <div></div>
         </div>
     )
@@ -38,7 +38,7 @@ function DetailIcon() {
 
 function EyeCloseIcon() {
     return (
-        <div className="eye_close_icon custom_icon">
+        <div className="closed-eye-icon icon__base">
             <div></div>
             <div></div>
         </div>
@@ -47,7 +47,7 @@ function EyeCloseIcon() {
 
 function EyeOpenIcon() {
     return (
-        <div className="eye_open_icon custom_icon">
+        <div className="opened-eye-icon icon__base">
             <div></div>
             <div></div>
         </div>
@@ -56,13 +56,13 @@ function EyeOpenIcon() {
 
 function DropDownIcon() {
     return (
-        <div className="dropdown_icon custom_icon"></div>
+        <div className="dropdown-icon icon__base"></div>
     )
 }
 
 function BackIcon() {
     return (
-        <div className="back_icon custom_icon"></div>
+        <div className="back-icon icon__base"></div>
     )
 }
 

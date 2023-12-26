@@ -22,12 +22,12 @@ function AddPlatformPage() {
                 </div>
                 <input className="account-field-value edit-field" value="" />
             </div>
-            <div id="system-add-cancel-button" className=.button__base" data-l10n="SYSTEM_ADD_CANCEL_BUTTON"
+            <div id="system-add-cancel-button" className="button__base" data-l10n="SYSTEM_ADD_CANCEL_BUTTON"
                 onClick={backToAccount}>
                 取消添加
             </div>
-            <div id="system-add-confirm-button" className=.button__base" data-l10n="SYSTEM_ADD_CONFIRM_BUTTON">
-    确认添加
+            <div id="system-add-confirm-button" className="button__base" data-l10n="SYSTEM_ADD_CONFIRM_BUTTON">
+                确认添加
             </div >
         </div >
     )

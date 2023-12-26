@@ -1,9 +1,14 @@
 @import (reference) "@/less/general.less";
 
-.custom_icon {
+.icon__base {
+    @eye__size: 80%;
+    @eye-wrapper__size: 1.5rem;
+    @eye__color: @blue-color__base;
+    @outline-width: 3px;
+
     flex-shrink: 0;
 
-    &.search_icon {
+    &.search-icon {
         @color: black;
         @size: 1.5rem;
         @gap: .1rem;
@@ -39,7 +44,7 @@
         }
     }
 
-    &.plus_icon {
+    &.plus-icon {
         @width: 0.4rem;
         @height: 1.5rem;
         @color: black;
@@ -63,7 +68,7 @@
         }
     }
 
-    &.list_icon {
+    &.list-icon {
         @size: 1.5rem;
         @color: black;
 
@@ -83,7 +88,7 @@
         }
     }
 
-    &.detail_icon {
+    &.detail-icon {
         @size: 1.2rem;
         @color: white;
 
@@ -108,13 +113,9 @@
         }
     }
 
-    @eye-pupil__size: .6rem;
-    @eye__size: 80%;
-    @eye-wrapper__size: 1.5rem;
-    @eye__color: @blue-color__base;
-    @outline-width: 3px;
+    &.opened-eye-icon {
+        @eye-pupil__size: .6rem;
 
-    &.eye_open_icon {
         .flex-row__center();
 
         position: relative;
@@ -139,7 +140,7 @@
 
     }
 
-    &.eye_close_icon {
+    &.closed-eye-icon {
         .flex-row__center();
 
         position: relative;
@@ -164,17 +165,15 @@
         }
     }
 
-    &.dropdown_icon {
-        @size: 6px;
-
+    &.dropdown-icon {
         position: relative;
         width: 0;
         height: 0;
-        border: @size solid transparent;
+        border: 6px solid transparent;
         border-color: @font-color__base transparent transparent transparent;
     }
 
-    &.back_icon {
+    &.back-icon {
         height: 0;
         width: 0;
         border-width: .5rem;
