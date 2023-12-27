@@ -13,8 +13,8 @@ function HideNavigatorButton() {
     }
 
     return (
-        <div id="hide-navigator-button-wrap">
-            <div id="hide-navigator-button" onClick={handleClick}>
+        <div className="hide-nav-button-wrapper">
+            <div className="hide-nav-button" onClick={handleClick}>
                 <div></div>
             </div>
         </div>
@@ -30,16 +30,16 @@ function Navigator() {
     }
 
     return (
-        <div id="navigator-bar" style={{ width: navDisplay ? "100%" : "0" }}>
-            <div id="navigator-content">
+        <div className="navigator" style={{ width: navDisplay ? "100%" : "0" }}>
+            <div className="navigator__container">
                 <SearchBar />
-                <div id="navigator-system-list-wrap">
-                    <div id="system-add-card-wrap">
-                        <div id="system-add-card" className="system-card" onClick={redirectToAddPlatform}>
+                <div className="system-list-wrapper">
+                    <div className="add-system-button-wrapper">
+                        <div className="add-system-button system-card" onClick={redirectToAddPlatform}>
                             <PlusIcon />
                         </div>
                     </div>
-                    <div id="navigator-system-list">
+                    <div className="system-list">
                         <div className="system-card">微博</div>
                         <div className="system-card">微博</div>
                         <div className="system-card">微博</div>

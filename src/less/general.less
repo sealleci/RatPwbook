@@ -83,8 +83,10 @@
     word-break: break-all;
 }
 
-.bg-color-transition() {
-    transition: background-color .1s, color .1s;
+.color-transition() {
+    transition:
+        color .1s,
+        background-color .1s;
 }
 
 .outline__base() {
@@ -97,17 +99,18 @@
 
 .button__base() {
     .text__unselectable();
-    .bg-color-transition();
+    .color-transition();
 
     cursor: pointer;
 }
 
 .scroll-bar__base() {
     &::-webkit-scrollbar-track {
-        background-color: @white-color__base;
         border-radius: @scroll-bar__width;
+        // background-color: @white-color__base;
         background: @gray-color__base;
-        box-shadow: inset -2px 2px 4px @shadow__dark,
+        box-shadow:
+            inset -2px 2px 4px @shadow__dark,
             inset 2px -2px 4px @shadow__light;
     }
 
