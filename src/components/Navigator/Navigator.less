@@ -109,7 +109,7 @@
     cursor: pointer;
 
     &:hover,
-    &.system-card-active {
+    &.system-card--active {
         background-color: rgba(@pink-color__base, @card__bg-color-opacity-2);
         color: white;
     }
@@ -218,11 +218,11 @@
         &::before {
             position: absolute;
             content: "";
+            top: calc(@arc__size * -1 * 2);
             height: calc(@arc__size * 2);
             width: @arc__size;
-            top: calc(@arc__size * -1 * 2);
-            // background-color: @blue-color__base;
             border-radius: 15px;
+            // background-color: @blue-color__base;
             box-shadow: calc(@arc__size * -1 / 2) calc(-@arc__size * -1 / 2) 0px @gray-color__base;
             z-index: -1;
         }
@@ -230,9 +230,9 @@
         &::after {
             position: absolute;
             content: "";
+            bottom: calc(@arc__size * -1 * 2);
             height: calc(@arc__size * 2);
             width: @arc__size;
-            bottom: calc(@arc__size * -1 * 2);
             border-radius: 15px;
             // background-color: @blue-color__base;
             box-shadow: calc(@arc__size * -1 / 2) calc(-@arc__size / 2) 0px @gray-color__base;

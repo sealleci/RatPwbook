@@ -2,13 +2,33 @@ import { useRef, useEffect, useMemo, useState } from 'react'
 import { DropDownIcon } from '@/components/Icon'
 import './MySelect.less'
 
-interface SelectItem {
+interface ItemProps {
     value: string
     name: string
 }
 
+function MySelectItem({ value, text, handler, isSelected, key }: {
+    value: string,
+    text: string,
+    handler: (event: React.MouseEvent<HTMLDivElement>) => void,
+    isSelected: boolean,
+    key: number
+}) {
+    return (
+        <div
+            className={'my-select__item' + isSelected ? ' my-select__item--selected' : ''}
+            onClick={handler}
+            data-value={value}
+            key={key}
+        >
+            {text}
+        </div>
+    )
+}
+
 function MySelect() {
-    const itemList: SelectItem[] = [
+    // temp date
+    const itemList: ItemProps[] = [
         {
             value: 'zh_cn',
             name: '中文'
@@ -26,6 +46,7 @@ function MySelect() {
     const setValue: (value: string) => void = (value: string) => {
         value
     }
+    // definitions
     const containerRef = useRef<HTMLDivElement>(null)
     const modalRef = useRef<HTMLDivElement>(null)
     const listRef = useRef<HTMLDivElement>(null)
@@ -48,7 +69,6 @@ function MySelect() {
     function clickContainer() {
         if (!modalRef.current) { return }
 
-        console.log
         setListPosition()
         modalRef.current.style.visibility = 'visible'
         setIsExpended(true)
@@ -73,7 +93,7 @@ function MySelect() {
     }, [observer])
 
     return (
-        <div className={isExpended ? 'my-select my-select--expanded' : 'my-select'}>
+        <div className={'my-select' + isExpended ? ' my-select--expanded' : ''}>
             <div className="my-select__container" ref={containerRef} onClick={clickContainer}>
                 <div>{itemList.find(item => item.value === selectedValue)?.name}</div>
                 <div>
@@ -85,12 +105,13 @@ function MySelect() {
                     {
                         itemList.map(
                             (item, index) => (
-                                <div
-                                    className={selectedValue === item.value ? 'my-select__item my-select__item--selected' : 'my-select__item'}
-                                    onClick={(event) => clickItem(event, item.value)}
-                                    data-value={item.value}
+                                <MySelectItem
+                                    value={item.value}
+                                    text={item.name}
+                                    handler={(event) => clickItem(event, item.value)}
+                                    isSelected={selectedValue === item.value}
                                     key={index}
-                                >{item.name}</div>
+                                />
                             )
                         )
                     }
