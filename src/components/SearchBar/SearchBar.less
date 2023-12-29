@@ -1,6 +1,6 @@
 @import (reference) "@/less/general.less";
 
-#navigator-search-bar {
+.search-bar {
     @bar__width: 1.5rem;
 
     .flex-row__center();
@@ -23,94 +23,90 @@
     &:focus-within {
         filter: drop-shadow(0px 0px 2px rgba(black, .2));
     }
+}
 
-    #navigator-search-input-wrap {
-        .flex-row__center();
+.search-bar__end {
+    width: 25%;
+    height: @bar__width;
+    background-color: @white-color__base;
 
-        width: 40%;
+    &.search-bar__left {
+        border-radius: @bar__width 0 0 @bar__width;
+    }
 
-        @media @screen__small {
-            width: 80%;
-            margin: .25rem 0;
-        }
+    &.search-bar__right {
+        border-radius: 0 @bar__width @bar__width 0;
+    }
 
-        input {
-            .font__base();
+    @media @screen__small {
+        width: 5%;
+    }
+}
 
-            width: calc(100% - @bar__width);
-            height: @bar__width;
-            margin: 0;
-            padding: 0;
-            border: 0;
-            outline: 0;
-            background-color: @white-color__base;
-            caret-color: @green-color__light;
+.search-input-wrapper {
+    .flex-row__center();
 
-            &::selection {
-                background-color: @green-color__light;
-                color: white;
-            }
-        }
+    width: 40%;
 
-        .search-icon {
-            @icon__color: rgb(192, 192, 192);
-            @icon__hover__color: rgb(164, 164, 164);
-            @icon__active__color: rgb(135, 133, 133);
-            @transition-duration: .1s;
+    @media @screen__small {
+        width: 80%;
+        margin: .25rem 0;
+    }
 
-            background-color: @white-color__base;
+    input {
+        .font__base();
 
-            &>div:nth-child(1) {
-                border-color: @icon__color;
-                transition: border-color @transition-duration;
-            }
+        width: calc(100% - @bar__width);
+        height: @bar__width;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        background-color: @white-color__base;
+        caret-color: @green-color__light;
 
-            &>div:nth-child(2) {
-                background-color: @icon__color;
-                transition: background-color @transition-duration;
-            }
-
-            &:hover {
-                &>div:nth-child(1) {
-                    border-color: @icon__hover__color;
-                }
-
-                &>div:nth-child(2) {
-                    background-color: @icon__hover__color;
-                }
-            }
-
-            &:active {
-                &>div:nth-child(1) {
-                    border-color: @icon__active__color;
-                }
-
-                &>div:nth-child(2) {
-                    background-color: @icon__active__color;
-                }
-            }
-        }
-
-        #search-button {
-            cursor: pointer;
+        &::selection {
+            background-color: @green-color__light;
+            color: white;
         }
     }
 
-    .navigator-search-bar-end {
-        width: 25%;
-        height: @bar__width;
+    .search-icon {
+        @icon__color: rgb(192, 192, 192);
+        @icon__hover__color: rgb(164, 164, 164);
+        @icon__active__color: rgb(135, 133, 133);
+        @transition-duration: .1s;
+
         background-color: @white-color__base;
 
-        &#navigator-search-bar-left {
-            border-radius: @bar__width 0 0 @bar__width;
+        &>div:nth-child(1) {
+            border-color: @icon__color;
+            transition: border-color @transition-duration;
         }
 
-        &#navigator-search-bar-right {
-            border-radius: 0 @bar__width @bar__width 0;
+        &>div:nth-child(2) {
+            background-color: @icon__color;
+            transition: background-color @transition-duration;
         }
 
-        @media @screen__small {
-            width: 5%;
+        &:hover {
+            &>div:nth-child(1) {
+                border-color: @icon__hover__color;
+            }
+
+            &>div:nth-child(2) {
+                background-color: @icon__hover__color;
+            }
+        }
+
+        &:active {
+            &>div:nth-child(1) {
+                border-color: @icon__active__color;
+            }
+
+            &>div:nth-child(2) {
+                background-color: @icon__active__color;
+            }
         }
     }
 }

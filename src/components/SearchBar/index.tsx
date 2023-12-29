@@ -3,13 +3,13 @@ import './SearchBar.less'
 
 function SearchBar() {
     return (
-        <div id="navigator-search-bar">
-            <div id="navigator-search-bar-left" className="navigator-search-bar-end"></div>
-            <div id="navigator-search-input-wrap">
-                <input type="text" id="navigator-search-input" data-l10n="SEARCH_PLACEHOLDER" placeholder="搜索" />
+        <div className="search-bar">
+            <div className="search-bar__left navigator-search-bar__end"></div>
+            <div className="search-input-wrapper">
+                <input type="text" data-l10n="SEARCH_PLACEHOLDER" placeholder="搜索" />
                 <SearchIcon />
             </div>
-            <div id="navigator-search-bar-right" className="navigator-search-bar-end"></div>
+            <div className="search-bar__right navigator-search-bar__end"></div>
         </div>
     )
 }
